@@ -207,3 +207,8 @@ img.place.left.rxjs-illustration {
   padding: 2rem;
   box-sizing: border-box;
 }
+
+.illustration-author {
+  margin: 1rem !important;
+  line-height: 1;
+}
