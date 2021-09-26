@@ -1,0 +1,209 @@
+.shower {
+  --slide-ratio: calc(16 / 9);
+}
+
+.shower.full mark.error.next {
+  visibility: visible;
+}
+
+mark.error {
+  background-color: transparent;
+}
+
+mark.error.next.active {
+  background-color: var(--color-red);
+  color: white;
+}
+
+.shower.list {
+  background-color: #292929;
+}
+
+.caption {
+  color: white;
+}
+
+.shower.list .slide.active {
+  box-shadow: 0 0 0 1px #f7168e,
+  0 0 0 20px #f7168e,
+  0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.slide.no-paddings {
+  padding: 0;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+  font-family: 'PT Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  background: transparent;
+}
+
+#wrong-animation-frame-scheduler .code-highlight {
+  border: 5px solid red;
+  width: 139px;
+  height: 42px;
+  position: absolute;
+  top: 237px;
+  left: 270px;
+}
+
+#wrong-animation-frame-scheduler .code-strike.place {
+  background-color: red;
+  width: 861px;
+  height: 10px;
+  transform: translate(-50%, -50%) rotate(-10deg);
+}
+
+.progress::before {
+  background-color: #f7168e;
+}
+
+
+.about-me-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.side {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+figure.krddevdays img {
+  width: 310px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.schedule-operators-slide {
+  --creation-color: coral;
+  --pipeable-color: mediumturquoise;
+}
+
+.operator-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+
+.operator-list-item::before {
+  display: none;
+}
+
+.operator-list-item.creation {
+  background-color: var(--creation-color);
+  color: white;
+}
+
+.operator-list-item.pipeable {
+  background-color: var(--pipeable-color);
+}
+
+.operator-list-item {
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.slide ul > li.legend-item::before {
+  content: '';
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+  background-color: var(--legend-bg);
+  position: absolute;
+  color: var(--color-grey);
+  text-align: right;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  opacity: 1;
+}
+
+.slide ul > li.legend-item.creation-legend::before {
+  --legend-bg: var(--creation-color);
+}
+
+.slide ul > li.legend-item.pipeable-legend::before {
+  --legend-bg: var(--pipeable-color);
+}
+
+.slide ul > li.legend-item {
+  position: relative;
+  padding-left: 1em;
+}
+
+.spotlight.scheduler-hierarchy {
+  --spotlight-width: 200px;
+  --spotlight-height: 200px;
+  --spotlight-left: -8px;
+  --spotlight-opacity: 0.7;
+}
+
+.scheduler-type-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.scheduler-type-list-item::before {
+  display: none;
+}
+
+.scheduler-type-list-item {
+  border: 1px solid black;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.scheduler-type-list-item .name {
+  font-weight: bold;
+  font-family: 'PT Mono', monospace;
+}
+
+.scheduler-type-list-item .description {
+  color: #868686;
+  font-size: 80%;
+}
+
+.all-links img {
+  width: 100%;
+}
+
+.all-links {
+  width: 40%;
+  text-align: center;
+}
+
+.front-slide .shout {
+  font-size: 100px;
+}
+
+.shower.full s.next {
+  visibility: visible;
+  text-decoration: none;
+}
+
+.shower.full s.next.active {
+  text-decoration: line-through;
+}
+
+img.place.left.rxjs-illustration {
+}
+
+.rxjs-illustration {
+  width: calc(var(--slide-width) / 2);
+}
+
+.talk-name {
+  width: calc(var(--slide-width) / 2);
+  padding: 2rem;
+  box-sizing: border-box;
+}

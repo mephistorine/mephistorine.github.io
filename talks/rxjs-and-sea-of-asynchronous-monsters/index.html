@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>RxJS и море асинхронных чудовищ</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+
+<!--  <link rel="stylesheet" href="assets/prism.css">-->
+
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" type="image/x-icon" href="https://rxjs.dev/assets/images/favicons/favicon.ico">
+</head>
+<body class="shower list">
+
+<header class="caption">
+  <h1>Таинственные шедулеры RxJS в море асинхронных чудовищ</h1>
+  <p>
+    <a href="https://twitter.com/mephistorine">Сэм Булатов</a>,
+    <a href="https://waliot.com">Waliot</a>
+  </p>
+</header>
+
+<section class="slide front-slide">
+  <img class="place left rxjs-illustration" src="pictures/rxjs.jpg" alt="Иллюстрация с маскотом библиотеки RxJS">
+  <h2 class="place right talk-name">Таинственные шедулеры RxJS <br> в море асинхронных чудовищ</h2>
+  <p class="place bottom right">
+    <a href="https://twitter.com/theGorgonist">@theGorgonist</a>
+  </p>
+</section>
+
+<!--region КУЛСТОРИ -->
+
+<section class="slide">
+  <pre class="place">
+    <code>interval(1000 / 60, animationFrameScheduler).pipe(</code>
+    <code>  tap(() => { <span class="comment">/* ANIMATION FRAME */</span> })</code>
+    <code>)</code>
+  </pre>
+</section>
+
+<section class="slide black clear">
+  <img class="place" src="pictures/wrong-animation-frame-scheduler.png" alt="Не правильно работающий animationFrameScheduler">
+  <img class="place next" style="height: 100%;" src="pictures/canadian-swimmer-mem.jpg" alt="Канадская пловчиха щурящаяся из-за плохого зрения">
+  <img class="place next" style="height: 100%;" src="pictures/I1yi4.png" alt="Удивленное лицо Ильи Германа">
+  <img class="place next" style="width: 100%; height: 100%;" src="pictures/I1yi4_1.png" alt="Максимально удивленное лицо Ильи Германа">
+</section>
+
+<!--endregion КУЛСТОРИ -->
+
+<!--region ПРИВЕТСТВИЕ -->
+
+<section class="slide">
+  <h2 class="shout">Сэм</h2>
+</section>
+
+<section class="slide" style="background-color: #082679;">
+  <a href="https://waliot.com">
+    <img class="place" style="width: 450px;" src="pictures/waliot.svg" alt="Логотип продукта Waliot">
+  </a>
+
+  <p class="place bottom">
+    <a href="https://waliot.com" style="color: white">waliot.com</a>
+  </p>
+</section>
+
+<section class="slide">
+  <a href="https://becycled.me">
+    <img class="place" style="width: 450px" src="pictures/beCycled-text.svg" alt="Логотип beCycled">
+  </a>
+
+  <p class="place bottom">
+    <a href="https://becycled.me">becycled.me</a>
+  </p>
+</section>
+
+<section class="slide">
+  <a href="https://krd.dev">
+    <figure class="krddevdays place">
+      <img src="pictures/kdd.svg" alt="">
+      <img src="pictures/kf.svg" alt="">
+      <img src="pictures/kb.svg" alt="">
+    </figure>
+  </a>
+
+  <p class="place bottom">
+    <a href="https://krd.dev">krd.dev</a>
+  </p>
+</section>
+
+<section class="slide">
+  <a href="https://github.com/ngRuAir/ngruair">
+    <img class="place" style="width: 350px" src="pictures/ngruair.svg" alt="Логотип NgRuAir">
+  </a>
+
+  <p class="place bottom">
+    <a href="https://github.com/ngRuAir/ngruair">github.com/ngRuAir/ngruair</a>
+  </p>
+</section>
+
+<section class="slide">
+  <a href="https://learnrxjs.ru">
+    <img class="place" style="width: 350px" src="pictures/rxjs-logo.svg" alt="Логотип RxJS">
+  </a>
+
+  <p class="place bottom">
+    <a href="https://learnrxjs.ru">learnrxjs.ru</a>
+  </p>
+</section>
+
+<!--endregion ПРИВЕТСТВИЕ -->
+
+<section class="slide">
+  <h2 class="shout">RxJS?</h2>
+</section>
+
+<section class="slide">
+  <blockquote class="place">
+    <p>RxJS — библиотека для реактивного программирования с использованием Наблюдаемых объектов, которые позволяют удобнее работать с асинхронным и callback-based кодом.</p>
+  </blockquote>
+</section>
+
+<section class="slide">
+  <h2 class="shout">Реактивность?</h2>
+</section>
+
+<section class="slide">
+  <blockquote class="place">
+    <p>Реактивное программирование — парадигма программирования, ориентированная на потоки данных и распространение изменений.</p>
+  </blockquote>
+</section>
+
+<!--region ЗАЧЕМ -->
+
+<section class="slide clear black">
+  <img class="place" style="width: 80%;" src="pictures/dive_in_rxjs.png" alt="Dive in RxJS">
+</section>
+
+<section class="slide">
+  <h2 class="shout">Зачем?</h2>
+</section>
+
+<section class="slide clear schedule-operators-slide">
+  <ul class="operator-list">
+    <li class="operator-list-item creation">interval</li>
+    <li class="operator-list-item creation">timer</li>
+    <li class="operator-list-item pipeable">sampleTime</li>
+    <li class="operator-list-item pipeable">debounceTime</li>
+    <li class="operator-list-item pipeable">auditTime</li>
+    <li class="operator-list-item pipeable">bufferTime</li>
+    <li class="operator-list-item pipeable">delay</li>
+    <li class="operator-list-item pipeable">throttleTime</li>
+    <li class="operator-list-item pipeable">timeout</li>
+    <li class="operator-list-item pipeable">windowTime</li>
+    <li class="operator-list-item pipeable">timeInterval</li>
+    <li class="operator-list-item pipeable">timeoutWith</li>
+  </ul>
+
+  <ul class="operator-list-legend">
+    <li class="legend-item creation-legend">
+      <a href="https://rxjs.dev/guide/operators#creation-operators">Порождающие</a>
+    </li>
+    <li class="legend-item pipeable-legend">
+      <a href="https://rxjs.dev/guide/operators#piping">Потоковые</a>
+    </li>
+  </ul>
+</section>
+
+<!--endregion ЗАЧЕМ -->
+
+<section class="slide clear black">
+  <img class="place" style="width: 100%;" src="pictures/scheduler-action.jpg" alt="Scheduler and Action = Good DX">
+</section>
+
+<section class="slide">
+  <blockquote class="place">
+    <p>Шедулер контролирует <u>где</u>, <u>как</u> и <u>когда</u> будет выполнена определенная работа</p>
+  </blockquote>
+</section>
+
+<section class="slide">
+  <h2>Обязанности шедулеров</h2>
+  <ol>
+    <li>Контекст выполнения</li>
+    <li>Стратегия выполнения</li>
+    <li>Таймер</li>
+  </ol>
+</section>
+
+<section class="slide">
+  <h2 class="shout">Контекст выполнения</h2>
+</section>
+
+<section class="slide clear black">
+  <img class="place" style="width: 50%;" src="pictures/async-mechanism-in-js.png" alt="How asynchronous calls work in JavaScript">
+</section>
+
+<section class="slide">
+  <pre class="place">
+    <code>requestAnimationFrame(() => console.log('animationFrame'))</code>
+    <code>setTimeout(() => console.log('macrotask'), 0)</code>
+    <code>Promise.resolve().then(() => console.log('microtask'))</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <pre class="place">
+    <code>scheduled(of(`Hello`), asyncScheduler)</code>
+    <code>of(`Hello`, asyncScheduler) <span class="comment">// DEPRECATED</span></code>
+  </pre>
+</section>
+
+<section class="slide">
+  <h2 class="shout">Стратегия выполнения</h2>
+</section>
+
+<section class="slide">
+  <pre class="place"><code class="language-typescript">
+    interface SomeScheduler {
+      public actions: Action[]
+      public flush(action: Action): void
+    }
+  </code></pre>
+</section>
+
+<section class="slide">
+  <h2 class="shout">Часы</h2>
+</section>
+
+<section class="slide">
+  <pre class="place"><code class="language-typescript">
+    interface TimestampProvider {
+      now(): number
+    }
+  </code></pre>
+</section>
+
+<section class="slide">
+  <h2 class="shout">Действие</h2>
+</section>
+
+<section class="slide">
+  <pre class="place">
+    <code>interface Action extends SubscriptionLike {</code>
+    <code class="next">  scheduler: SchedulerLike</code>
+    <code class="next">  work: Function</code>
+    <code class="next">  schedule(state: any, delay: number): SubscriptionLike</code>
+    <code>}</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <pre class="place">
+    <code>const sub = of('Hello RndTech Conf')
+      .subscribe(console.log)</code>
+    <code>sub.unsubscribe()</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <pre class="place">
+    <code>const delay = 1000</code>
+    <code>const sub = scheduler.schedule(
+      console.log,
+      delay,
+      'Hello RndTech Conf'
+)</code>
+    <code>sub.unsubscribe()</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <pre class="place">
+    <code>const sub1 = scheduler.schedule()</code>
+    <code>const sub2 = scheduler.schedule()</code>
+    <code>sub1.add(sub2)</code>
+    <code>sub1.unsubscribe()</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <h2 class="shout">Виды шедулеров</h2>
+</section>
+
+<section class="slide">
+  <ul class="scheduler-type-list">
+    <li class="scheduler-type-list-item">
+      <span class="name">AsyncScheduler</span>
+      <span class="description">макро</span>
+    </li>
+    <li class="scheduler-type-list-item next">
+      <span class="name">AsapScheduler</span>
+      <span class="description">микро</span>
+    </li>
+    <li class="scheduler-type-list-item next">
+      <span class="name">AnimationFrameScheduler</span>
+      <span class="description">перерисовка</span>
+    </li>
+    <li class="scheduler-type-list-item next">
+      <span class="name">QueueScheduler</span>
+      <span class="description">синхронно</span>
+    </li>
+    <li class="scheduler-type-list-item next">
+      <span class="name">TestScheduler</span>
+      <span class="description">для тестирования</span>
+    </li>
+    <li class="scheduler-type-list-item next">
+      <span class="name">VirtualTimeScheduler</span>
+      <span class="description">эмуляция времени</span>
+    </li>
+  </ul>
+</section>
+
+<section class="slide">
+  <img class="place" src="pictures/schedulers-hierarchy.svg" style="width: 90%" alt="Иерархия шедулеров">
+  <div class="spotlight next scheduler-hierarchy"></div>
+</section>
+
+<section class="slide">
+  <video class="place" style="width: 100%;" controls src="pictures/shedulers-diff-demo.mp4"></video>
+</section>
+
+<section class="slide">
+  <pre class="place">
+    <code>interval(<mark class="error next">1000 / 60</mark>, animationFrameScheduler).pipe(</code>
+    <code>  tap(() => { <span class="comment">/* ANIMATION FRAME */</span> })</code>
+    <code>)</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <blockquote class="place">
+    <p>All of these schedulers allow scheduling a 0 to get the default behavior, or scheduling a later time (>0), which generally falls back to a setTimeout behavior. This aspect of the design, frankly, is rife with subtle flaws.</p>
+    <figcaption>
+      <a href="https://github.com/WICG/scheduling-apis/issues/47#issuecomment-884240902">— Бен Леш</a>
+    </figcaption>
+  </blockquote>
+</section>
+
+<section class="slide">
+  <pre class="place">
+    <code>interval(0, animationFrameScheduler).pipe(</code>
+    <code>  tap(() => { <span class="comment">/* ANIMATION FRAME */</span> })</code>
+    <code>)</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <h2 class="shout">Использование</h2>
+</section>
+
+<section class="slide">
+  <h2>Использование</h2>
+  <ul>
+    <li>Напрямую</li>
+    <li class="next">Аргумент порождающей функции</li>
+    <li class="next">Функция <code>scheduled</code></li>
+    <li class="next">Операторы</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Напрямую</h2>
+  <pre>
+    <code>const delay = 1000</code>
+    <code>const sub = scheduler.schedule(
+      console.log,
+      delay,
+      'Hello RndTech Conf'
+)</code>
+    <code>sub.unsubscribe()</code>
+  </pre>
+
+  <footer class="footer">
+    <p>Но чаще всего вы будете использовать этот вариант, при создании своих потоков, например как функция <code>timer</code></p>
+  </footer>
+</section>
+
+<section class="slide">
+  <h2>Аргумент порождающей функции</h2>
+  <pre>
+    <code>of('Hello',  <s class="next">asyncScheduler</s>)</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <h2>Функция <code>scheduled</code></h2>
+  <p>* с <a href="https://github.com/ReactiveX/rxjs/blob/master/CHANGELOG.md#650-2019-04-23">6.5.3</a></p>
+  <pre>
+    <code>scheduled(of(`Hello`), asyncScheduler).pipe(</code>
+    <code class="comment">  // some logic</code>
+    <code>)</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <h2>Операторы</h2>
+  <ul>
+    <li><code>observeOn</code></li>
+    <li><code>subscribeOn</code></li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2><code>observeOn</code></h2>
+
+  <pre>
+    <code>of('Hello').pipe(</code>
+    <code>  observeOn(asyncScheduler, 1000)</code>
+    <code>)</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <h2><code>subscribeOn</code></h2>
+
+  <pre>
+    <code>of('Hello').pipe(</code>
+    <code>  subscribeOn(asyncScheduler, 1000)</code>
+    <code>)</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <h2>Итог</h2>
+  <ul>
+    <li>Шедулер контролирует время, контекст и последовательность действий</li>
+    <li>Шедулер можно использовать двумя способами (<code>scheduled</code>, операторы, аргументом)</li>
+    <li>При указании задержки используется AsyncScheduler</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2 class="shout">Спасибо!</h2>
+</section>
+
+<section class="slide">
+  <h2 class="shout">
+    <a href="https://twitter.com/mephistorine">@mephistorine</a>
+  </h2>
+</section>
+
+<section class="slide">
+  <h2 class="shout">
+    <a href="https://mephi.dev/rxsh">mephi.dev/rxsh</a>
+  </h2>
+</section>
+
+<!--<section class="slide">
+  <figure class="place all-links">
+    <img src="pictures/all-links.svg" alt="QR-код на страницу со всеми ссылками">
+    <figcaption>
+      <a href="http://simp.ly/p/fTf1Vg">http://simp.ly/p/fTf1Vg</a>
+    </figcaption>
+  </figure>
+</section>-->
+
+<div class="progress"></div>
+
+<script src="shower/shower.js"></script>
+<!-- Copyright © 2021 Sam Bulatov, First monitoring company -->
+
+</body>
+</html>
