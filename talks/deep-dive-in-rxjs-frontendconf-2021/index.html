@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Глубокое погружение в реактивное программирование</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body class="shower list">
+
+<header class="caption">
+  <h1>Глубокое погружение в реактивное программирование</h1>
+  <p><a href="https://mephi.dev">Сэм Булатов</a>, <a href="https://waliot.com">Waliot</a></p>
+</header>
+
+<section class="slide first clear">
+  <img class="cover" src="./pictures/title-slide-background.png">
+  <h2 class="title">Глубокое погружение в реактивное программирование</h2>
+  <p class="speaker-name">Сэм Булатов</p>
+</section>
+
+<!--region ПРИВЕТСТВИЕ -->
+
+<section class="slide">
+  <h2 class="shout">Сэм</h2>
+</section>
+
+<section class="slide" style="background-color: #082679;">
+  <a href="https://waliot.com">
+    <img class="place" style="width: 450px;" src="pictures/waliot.svg" alt="Логотип продукта Waliot">
+  </a>
+
+  <p class="place bottom">
+    <a href="https://waliot.com" style="color: white">waliot.com</a>
+  </p>
+</section>
+
+<section class="slide">
+  <a href="https://becycled.me">
+    <img class="place" style="width: 450px" src="pictures/beCycled-text.svg" alt="Логотип beCycled">
+  </a>
+
+  <p class="place bottom">
+    <a href="https://becycled.me">becycled.me</a>
+  </p>
+</section>
+
+<section class="slide">
+  <a href="https://krd.dev">
+    <figure class="krddevdays place">
+      <img src="pictures/kdd.svg" alt="">
+      <img src="pictures/kf.svg" alt="">
+      <img src="pictures/kb.svg" alt="">
+    </figure>
+  </a>
+
+  <p class="place bottom">
+    <a href="https://krd.dev">krd.dev</a>
+  </p>
+</section>
+
+<section class="slide">
+  <a href="https://github.com/ngRuAir/ngruair">
+    <img class="place" style="width: 350px" src="pictures/ngruair.svg" alt="Логотип NgRuAir">
+  </a>
+
+  <p class="place bottom">
+    <a href="https://github.com/ngRuAir/ngruair">github.com/ngRuAir/ngruair</a>
+  </p>
+</section>
+
+<section class="slide">
+  <a href="https://learnrxjs.ru">
+    <img class="place" style="width: 350px" src="pictures/rxjs-logo.svg" alt="Логотип RxJS">
+  </a>
+
+  <p class="place bottom">
+    <a href="https://learnrxjs.ru">learnrxjs.ru</a>
+  </p>
+</section>
+
+<!--endregion ПРИВЕТСТВИЕ -->
+
+<!--
+
+<section class="slide is-scroll is-long-code">
+  <pre>
+    <code>function play(movieId, cancelButton, callback) {</code>
+    <code>  var movieTicket,</code>
+    <code>    playError,</code>
+    <code>    tryFinish = function() {</code>
+    <code>      if (playError) {</code>
+    <code>        callback(null, playError);</code>
+    <code>      } else if (movieTicket && player.initialized) {</code>
+    <code>        callback(null, movieTicket);</code>
+    <code>      }</code>
+    <code>    };</code>
+    <code>  cancelButton.addEventListener("click", function() {</code>
+    <code>    playError = "cancelled"</code>
+    <code>  })</code>
+    <code>  if (!player.initialized) {</code>
+    <code>    player.init(function(error) {</code>
+    <code>      playError = error;</code>
+    <code>      tryFinish();</code>
+    <code>    })</code>
+    <code>  }</code>
+    <code>  authorizeMovie(function(error, ticket) {</code>
+    <code>    playError = error;</code>
+    <code>    movieTicket = ticket;</code>
+    <code>    tryFinish();</code>
+    <code>  })</code>
+    <code>}</code>
+  </pre>
+</section>
+-->
+
+<section class="slide is-scroll is-long-code">
+  <pre>
+    <code>function play(movieId, cancelButton, callback) {</code>
+    <code class="mark">  var movieTicket,</code>
+    <code>    playError,</code>
+    <code>    tryFinish = function() {</code>
+    <code>      if (playError) {</code>
+    <code>        callback(null, playError);</code>
+    <code class="mark">      } else if (movieTicket && player.initialized) {</code>
+    <code class="mark">        callback(null, movieTicket);</code>
+    <code>      }</code>
+    <code>    };</code>
+    <code>  cancelButton.addEventListener("click", function() {</code>
+    <code>    playError = "cancelled"</code>
+    <code>  })</code>
+    <code>  if (!player.initialized) {</code>
+    <code>    player.init(function(error) {</code>
+    <code>      playError = error;</code>
+    <code>      tryFinish();</code>
+    <code>    })</code>
+    <code>  }</code>
+    <code>  authorizeMovie(function(error, ticket) {</code>
+    <code>    playError = error;</code>
+    <code class="mark">    movieTicket = ticket;</code>
+    <code>    tryFinish();</code>
+    <code>  })</code>
+    <code>}</code>
+  </pre>
+</section>
+
+<section class="slide is-scroll is-long-code">
+  <pre>
+    <code>function play(movieId, cancelButton, callback) {</code>
+    <code>  var movieTicket,</code>
+    <code class="mark">    playError,</code>
+    <code>    tryFinish = function() {</code>
+    <code class="mark">      if (playError) {</code>
+    <code class="mark">        callback(null, playError);</code>
+    <code>      } else if (movieTicket && player.initialized) {</code>
+    <code>        callback(null, movieTicket);</code>
+    <code>      }</code>
+    <code>    };</code>
+    <code>  cancelButton.addEventListener("click", function() {</code>
+    <code>    playError = "cancelled"</code>
+    <code>  })</code>
+    <code>  if (!player.initialized) {</code>
+    <code>    player.init(function(error) {</code>
+    <code>      playError = error;</code>
+    <code>      tryFinish();</code>
+    <code>    })</code>
+    <code>  }</code>
+    <code>  authorizeMovie(function(error, ticket) {</code>
+    <code class="mark">    playError = error;</code>
+    <code>    movieTicket = ticket;</code>
+    <code>    tryFinish();</code>
+    <code>  })</code>
+    <code>}</code>
+  </pre>
+</section>
+
+<section class="slide is-scroll is-long-code">
+  <pre>
+    <code>function play(movieId, cancelButton, callback) {</code>
+    <code>  var movieTicket,</code>
+    <code>    playError,</code>
+    <code>    tryFinish = function() {</code>
+    <code>      if (playError) {</code>
+    <code>        callback(null, playError);</code>
+    <code>      } else if (movieTicket && player.initialized) {</code>
+    <code>        callback(null, movieTicket);</code>
+    <code>      }</code>
+    <code>    };</code>
+    <code class="mark">  cancelButton.addEventListener("click", function() {</code>
+    <code class="mark">    playError = "cancelled"</code>
+    <code class="mark">  })</code>
+    <code>  if (!player.initialized) {</code>
+    <code>    player.init(function(error) {</code>
+    <code>      playError = error;</code>
+    <code>      tryFinish();</code>
+    <code>    })</code>
+    <code>  }</code>
+    <code>  authorizeMovie(function(error, ticket) {</code>
+    <code>    playError = error;</code>
+    <code>    movieTicket = ticket;</code>
+    <code>    tryFinish();</code>
+    <code>  })</code>
+    <code>}</code>
+  </pre>
+</section>
+
+<section class="slide black clear">
+  <img src="pictures/gof.jpeg" class="place" width="39%" alt="Обложка книги «Шаблоны объектно ориентированного программирования»">
+</section>
+
+<section class="slide">
+  <h2 class="shout">Observer</h2>
+</section>
+
+<section class="slide">
+  <img class="place" src="pictures/observer-pattern.svg" width="40%" alt="Шаблон «Наблюдатель»">
+</section>
+
+<section class="slide horizontal-centered">
+  <pre>
+    <code>button.addEventListener("click", (event) => {</code>
+    <code>  event.push(event)</code>
+    <code>})</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <img class="cover" src="pictures/1984.png" alt="Отсылка на роман «1984»">
+</section>
+
+<section class="slide">
+  <h2 class="shout">Push vs Pull</h2>
+</section>
+
+<section class="slide">
+  <blockquote class="place large">
+    <p>В Pull стратегии потребитель сам решает, когда ему лучше получить данные от производителя</p>
+  </blockquote>
+</section>
+
+<section class="slide">
+  <blockquote class="place large">
+    <p>В Push стратегии уже производитель решает, когда доставить данные потребителю</p>
+  </blockquote>
+</section>
+
+<section class="slide horizontal-centered">
+  <table class="extra-table">
+    <tr>
+      <th></th>
+      <th>Производитель</th>
+      <th>Потребитель</th>
+    </tr>
+    <tr>
+      <td>Pull</td>
+      <td>Пассивен</td>
+      <td>Активен</td>
+    </tr>
+    <tr>
+      <td>Push</td>
+      <td>Активен</td>
+      <td>Пассивен</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide horizontal-centered">
+  <table class="extra-table">
+    <tr>
+      <th></th>
+      <th>Единичное</th>
+      <th>Множественное</th>
+    </tr>
+    <tr>
+      <td>Pull</td>
+      <td>Function</td>
+      <td>Iterator</td>
+    </tr>
+    <tr>
+      <td>Push</td>
+      <td>Promise</td>
+      <td><span class="next"><mark>Observable</mark></span></td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide side-by-side">
+  <img class="place side left" src="pictures/reactive.jpeg" alt="Реактивность?">
+  <h2 class="place side title right">Реактивное программирование</h2>
+</section>
+
+<section class="slide">
+  <blockquote class="place large">
+    <p>Реактивное программирование — парадигма программирования, ориентированная на <mark>потоки данных</mark> и <mark>распространение изменений</mark></p>
+  </blockquote>
+</section>
+
+<section class="slide">
+  <h2 class="shout">Поток</h2>
+</section>
+
+<section class="slide horizontal-centered">
+  <pre>
+    <code>const button = document.querySelector("#button")</code>
+    <code>const events = []</code>
+    <code>button.addEventListener("click", (event) => {</code>
+    <code>  event.push(event)</code>
+    <code>})</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <img class="cover" src="pictures/stream-axis.png" alt="Визуальное представление потока в виде оси t">
+</section>
+
+<section class="slide">
+  <blockquote class="place large">
+    <p>Поток — последовательность элементов отсортированных во времени, и позволяющаяя сообщать о своем изменении</p>
+  </blockquote>
+</section>
+
+<section class="slide">
+  <h2 class="shout">Распространение изменений</h2>
+</section>
+
+<section class="slide">
+  <h2 class="shout">CSS</h2>
+</section>
+
+<section class="slide horizontal-centered">
+  <pre>
+    <code>body {</code>
+    <code>  --header-size: 60px;</code>
+    <code>  --main-content-size: calc(100% - var(--header-size));</code>
+    <code>}</code>
+  </pre>
+</section>
+
+<section class="slide horizontal-centered">
+  <pre>
+    <code>.header {</code>
+    <code>  width: var(--header-size)</code>
+    <code>}</code>
+    <code>.main-content {</code>
+    <code>  width: var(--main-content-size)</code>
+    <code>}</code>
+  </pre>
+</section>
+
+<section class="slide horizontal-centered">
+  <pre>
+    <code>document.body.style.setProperty("--header-size", "75px")</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <h2 class="shout">RxJS</h2>
+</section>
+
+<section class="slide">
+  <h2>Фундамент</h2>
+  <ul>
+    <li>Observable</li>
+    <li>Operator</li>
+    <li>Subscription</li>
+    <li>Subject</li>
+    <li>Scheduler</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Observable</h2>
+  <pre>
+    <code>const stream = new Observable((subscriber) => {</code>
+    <code>  subscriber.next(1)</code>
+    <code>  subscriber.next(2)</code>
+    <code>  subscriber.next(3)</code>
+    <code>  subscriber.complete()</code>
+    <code>})</code>
+    <code class="next">stream.subscribe(console.log) <span class="comment">// 1 2 3</span></code>
+  </pre>
+</section>
+
+<section class="slide horizontal-centered">
+  <blockquote>
+    <p>Observable – ленивая Push коллекция множественных значений</p>
+  </blockquote>
+</section>
+
+<section class="slide">
+  <h2>Operator</h2>
+  <pre>
+    <code>const stream = new Observable((subscriber) => {</code>
+    <code>  ...</code>
+    <code>})</code>
+    <code>const streamModified = stream.pipe(</code>
+    <code class="mark">  map((value) => value * 2)</code>
+    <code>)</code>
+    <code>stream.subscribe(console.log) <span class="comment">// 1 4 6</span></code>
+  </pre>
+</section>
+
+<section class="slide">
+  <h2>Subscription</h2>
+  <pre>
+    <code>const stream = new Observable((subscriber) => {</code>
+    <code>  button.addEventListener((event) => subscriber.next(event))</code>
+    <code>})</code>
+    <code>const subscription = stream.subscribe(console.log)</code>
+    <code class="mark">subscription.unsubscribe()</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <h2>Subject</h2>
+  <pre>
+    <code>const subject = new Subject()</code>
+    <code>subject.subscribe((v) => console.log(`observerA: ${v}`))</code>
+    <code>subject.subscribe((v) => console.log(`observerB: ${v}`))</code>
+
+    <code>subject.next(1)</code>
+    <code>subject.next(2)</code>
+
+    <code class="comment">// Logs:</code>
+    <code class="comment">// observerA: 1 // observerA: 2</code>
+    <code class="comment">// observerB: 1 // observerB: 2</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <h2>Scheduler</h2>
+  <pre>
+    <code><mark>asyncScheduler</mark>.schedule(</code>
+    <code>  (x) => console.log(x),</code>
+    <code>  0,</code>
+    <code>  "Hello"</code>
+    <code>)</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <h2 class="shout">Благодарю!</h2>
+</section>
+
+<section class="slide horizontal-centered last">
+  <pre>
+    <code><a href="">mephi.dev/ddir</a></code>
+    <code><a href="https://mephi.dev/about#contacts">@mephistorine</a></code>
+  </pre>
+</section>
+
+<div class="progress"></div>
+
+<script src="shower/shower.js"></script>
+<!-- Copyright © 2021 Sam Bulatov, Waliot -->
+
+</body>
+</html>

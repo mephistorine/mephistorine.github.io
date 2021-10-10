@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "TTTravels";
+  font-weight: bold;
+  src: url("./fonts/TTTravels-DemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "TTTravels";
+  font-display: swap;
+  src: url("./fonts/TTTravels-Regular.ttf") format("truetype");
+}
+
+
+.shower {
+  --slide-ratio: calc(16 / 9);
+}
+
+.shower.list {
+  background-color: #292929;
+}
+
+.shower.list .slide.active {
+  box-shadow: 0 0 0 1px #f7168e,
+  0 0 0 20px #f7168e,
+  0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.progress::before {
+  background-color: #f7168e;
+}
+
+.slide.no-paddings {
+  padding: 0;
+}
+
+.slide.is-scroll {
+  overflow-y: auto;
+}
+
+.slide.is-long-code {
+  padding-top: 1rem;
+}
+
+.slide.is-long-code pre {
+  font-size: 0.65em;
+}
+
+.slide.is-long-code pre code {
+  line-height: 1.4;
+}
+
+.slide.horizontal-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide.last pre {
+  font-size: 3.3em;
+}
+
+.caption {
+  color: white;
+}
+
+.first .title,
+.first .speaker-name {
+  font-family: "TTTravels", "PT Sans", sans-serif;
+  color: black;
+}
+
+figure.krddevdays img {
+  width: 310px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.set-horizontal-center,
+.slide pre.set-horizontal-center {
+  margin-top: 8rem;
+}
+
+.extra-table {
+  font-size: 120%;
+}
+
+.slide.side-by-side .side {
+  width: calc(var(--slide-width) / 2);
+  margin: 0;
+}
+
+.slide.side-by-side .side.title {
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.large {
+  font-size: 140%;
+}
