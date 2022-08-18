@@ -1,0 +1,51 @@
+Arguments: 
+  /home/stylesam/.nvm/versions/node/v10.15.1/bin/node /home/stylesam/.nvm/versions/node/v10.15.1/bin/yarn add concurrently
+
+PATH: 
+  /home/stylesam/.nvm/versions/node/v10.15.1/bin:/home/stylesam/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  10.15.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/stylesam/mega/talks/backend-for-frontenders/package.json: Unexpected token } in JSON at position 280
+      at JSON.parse (<anonymous>)
+      at /home/stylesam/.nvm/versions/node/v10.15.1/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/home/stylesam/.nvm/versions/node/v10.15.1/lib/node_modules/yarn/lib/cli.js:304:30)
+      at /home/stylesam/.nvm/versions/node/v10.15.1/lib/node_modules/yarn/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "backend-for-frontenders",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+      "pdf": "shower pdf",
+      "serve": "shower serve",
+      "archive": "shower archive",
+      "prepare": "shower prepare",
+      "publish": "shower publish",
+      ""
+    },
+    "dependencies": {
+      "@shower/ribbon": "^3.2.2",
+      "shower-core": "^2.1.0"
+    },
+    "devDependencies": {
+      "@shower/cli": "^0.2.8"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

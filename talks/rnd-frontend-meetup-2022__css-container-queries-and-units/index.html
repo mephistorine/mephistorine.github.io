@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>CSS Container Queries and units – Сэм Булатов</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+    <style>
+      .shower {
+        --slide-ratio: calc(16 / 9);
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="https://dummyimage.com/400x400/8870ff/0011ff.png&text=+">
+    <link rel="stylesheet" href="./assets/mephi.css">
+    <script>
+      tailwind.config = {
+        important: true
+      }
+    </script>
+  </head>
+  <body class="shower list">
+    <header class="caption">
+      <h1>CSS Container Queries and units</h1>
+      <p>Сэм Булатов, <a href="https://waliot.com">Waliot</a>, <a href="https://krd.dev">krd.dev</a></p>
+    </header>
+
+    <!-- region ПРИВЕТСТВИЕ -->
+
+    <section class="slide">
+      <h2 class="shout">CSS Container Queries and units</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Я Сэм 👋</h2>
+    </section>
+
+    <section class="slide grid">
+      <h2 class="shout top-[220px]">
+        <code class="bg-transparent	">
+          <a href="https://krd.dev">krd.dev</a>
+        </code>
+      </h2>
+      <div class="flex gap-4 absolute h-[100px] top-[340px] left-[174px]">
+        <img src="assets/kdd.svg" alt="">
+        <img src="assets/kf.svg" alt="">
+        <img src="assets/kb.svg" alt="">
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">
+        <code class="bg-transparent	">
+          <a href="https://krd.dev/cfp"><span class="text-gray-400">krd.dev</span>/cfp</a>
+        </code>
+      </h2>
+    </section>
+
+    <section class="slide clear bg-[#082679]">
+      <a href="https://waliot.com">
+        <img class="place w-[450px] top-[100px]" src="assets/waliot.svg" alt="Логотип продукта Waliot">
+      </a>
+
+      <div class="absolute right-0 bottom-0 p-4 leading-none">
+        <a href="https://waliot.com" class="text-white">waliot.com</a>
+      </div>
+
+      <img class="absolute w-full top-[160px] left-[20px] scale-[1.3]" src="./assets/cars.svg" alt="">
+    </section>
+
+    <section class="slide">
+      <a href="https://learnrxjs.ru">
+        <img class="place w-[350px]" src="assets/rxjs-logo.svg" alt="Логотип RxJS">
+      </a>
+
+      <p class="place bottom">
+        <a href="https://learnrxjs.ru">learnrxjs.ru</a>
+      </p>
+    </section>
+
+    <!-- endregion -->
+
+    <!-- region ПРОБЛЕМА -->
+
+    <section class="slide clear black">
+      <img class="cover" src="./assets/problems.png" alt="">
+
+      <div>
+        <div class="absolute top-[133px] left-[54px]  w-[156px] h-[49px] border border-red-500 border-2"></div>
+        <div class="absolute top-[133px] left-[244px] w-[120px] h-[100px] border border-red-500 border-2"></div>
+        <div class="absolute top-[138px] left-[567px]  w-[175px] h-[138px] border border-red-500 border-2"></div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Чем плох <code>@media</code>?</h2>
+    </section>
+
+    <section class="slide">
+      <h2>Классические решение: <mark>Состояние</mark></h2>
+      <ul>
+        <li>Классы</li>
+        <li>data-атрибуты</li>
+        <li>API</li>
+        <li>другие способы...</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div>
+        <div>
+          <h2>Плюсы</h2>
+          <ul>
+            <li>Простота</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Минусы</h2>
+          <ul>
+            <li>Не адаптивно</li>
+            <li>Может получиться миллион всяких вариаций</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- endregion -->
+
+    <!-- region РЕШЕНИЕ -->
+
+    <section class="slide">
+      <h2>Новое решение: <mark>Выражения от контейнера</mark> <br> или Container Queries</h2>
+      <pre>
+        <code>&lt;section&gt;</code>
+        <div class="next">
+          <code>  &lt;article&gt;</code>
+          <div class="next">
+            <code>    &lt;img class="poster"&gt;</code>
+            <code>    &lt;h2&gt;Hello&lt;/h2&gt;</code>
+          </div>
+          <code>  &lt;/article&gt;</code>
+        </div>
+        <code>&lt;/section&gt;</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>@<mark class="next">container</mark> <span class="next">(max-width: 200px)</span> {</code>
+        <div class="next">
+          <code>  article .poster {</code>
+          <code>    display: none;</code>
+          <code>  }</code>
+        </div>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Как этим пользоваться?</h2>
+    </section>
+
+    <section class="slide">
+      <h2>Для начала включить</h2>
+      <ol>
+        <li><code>chrome://flags</code></li>
+        <li><code>Enable CSS Container Queries</code></li>
+      </ol>
+      <img class="next place w-[80%]" src="./assets/browser-support.png" alt="">
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">CSS Writing Modes</h2>
+    </section>
+
+    <section class="slide">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cupiditate, ea esse eveniet fugiat impedit, modi, molestiae mollitia necessitatibus numquam praesentium totam. Ex labore magnam nulla repellendus sint, tempora unde!</p>
+      <p class="next">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cupiditate, ea esse eveniet fugiat impedit, modi, molestiae mollitia necessitatibus numquam praesentium totam. Ex labore magnam nulla repellendus sint, tempora unde!</p>
+    </section>
+
+    <section class="slide">
+      <div class="next absolute top-[96px] left-[444px] font-bold font-monospace">block-start</div>
+      <div class="next absolute top-[250px] left-[232px] font-bold font-monospace">inline-start</div>
+      <div class="next absolute top-[430px] left-[444px] font-bold font-monospace">block-end</div>
+      <div class="next absolute top-[250px] left-[674px] font-bold font-monospace">inline-end</div>
+
+      <div class="absolute top-1/2 left-1/2 w-[300px] h-[300px] -translate-y-1/2 -translate-x-1/2 border border-black overflow-hidden text-gray-300">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, eligendi enim minus odio provident quas rem. Accusantium corporis iure quia.
+      </div>
+    </section>
+
+    <section class="slide">
+      <img class="place w-1/3" src="./assets/content-axis.png" alt="">
+    </section>
+
+    <section class="slide">
+      <h2><code>container-type</code></h2>
+      <ul>
+        <li><code>none</code></li>
+        <li><code>block-size</code></li>
+        <li><code>inline-size</code></li>
+        <li><code>size</code></li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>section {</code>
+        <code>  container-type: <span class="next">inline-size</span>;</code>
+        <code>}</code>
+        <div class="next">
+          <code><br></code>
+          <code>@container (max-width: 200px) {</code>
+          <code>  article .poster {</code>
+          <code>    display: none;</code>
+          <code>  }</code>
+          <code>}</code>
+        </div>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>aside, main {</code>
+        <code>  container-type: inline-size;</code>
+        <code>}</code>
+        <code><br></code>
+        <code>h2 { font-size: 1.2em; }</code>
+        <code><br></code>
+        <code>@container (min-width: 40em) {</code>
+        <code>  h2 { font-size: 1.5em; }</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2><code>container-type</code></h2>
+      <ul>
+        <li><code>none</code></li>
+        <li><code>block-size</code></li>
+        <li><code>inline-size</code></li>
+        <li><code>size</code></li>
+        <li><code>style</code></li>
+        <li><code>state</code></li>
+      </ul>
+
+      <div class="absolute top-[368px] left-[174px]  w-[36px] h-[101px] border border-red-500 border-4 border-l-0"></div>
+    </section>
+
+    <section class="slide">
+      <h2><code>container-type: style</code></h2>
+      <pre>
+        <code>section {</code>
+        <code>  container-type: style;</code>
+        <code>}</code>
+        <code>@container (--cards) {</code>
+        <code>  article {</code>
+        <code>    ...</code>
+        <code>  }</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2><code>container-type: state</code></h2>
+      <pre>
+        <code>header {</code>
+        <code>  container-type: is-stuck is-visible;</code>
+        <code>  position: sticky;</code>
+        <code>  top: 0;</code>
+        <code>}</code>
+        <code>@container (is-stuck) { /* … */ }</code>
+        <code>@container (is-visible) { /* … */ }</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>&lt;main&gt;</code>
+        <code class="next">  &lt;div class=&quot;card&quot;&gt;&lt;/div&gt;</code>
+        <code>&lt;/main&gt;</code>
+        <code>&lt;aside&gt;</code>
+        <code class="next">  &lt;div class=&quot;card&quot;&gt;&lt;/div&gt;</code>
+        <code>&lt;/aside&gt;</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>main, aside {</code>
+        <code>  container-type: inline-size;</code>
+        <code>}</code>
+        <code>@container (max-width: 300px) {</code>
+        <code>  .card {</code>
+        <code>    ...</code>
+        <code>  }</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2><code>container-name</code></h2>
+      <ul>
+        <li><code>none</code></li>
+        <li><code>&lt;string&gt;</code></li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>main, aside {</code>
+        <code>  container-type: inline-size;</code>
+        <code>}</code>
+        <code>main {</code>
+        <code class="mark">  container-name: main-layout;</code>
+        <code>}</code>
+        <code>aside {</code>
+        <code class="mark">  container-name: aside-layout;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>@container <mark>main-layout</mark> (max-width: 300px) {</code>
+        <code>  .card {</code>
+        <code>    ...</code>
+        <code>  }</code>
+        <code>}</code>
+        <code>@container <mark>aside-layout</mark> (max-width: 200px) {</code>
+        <code>  .card {</code>
+        <code>    ...</code>
+        <code>  }</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2><code>container</code></h2>
+      <pre>
+        <code>main {</code>
+        <code>  container: inline-size / main-layout;</code>
+        <code>}</code>
+      </pre>
+      <pre class="next">
+        <code>main {</code>
+        <code>  container: inline-size;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Подробнее разберем <code>@container</code></h2>
+      <ul>
+        <li>Возможные значения</li>
+        <li>Более удобные сравнения</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2><code>@container</code> возможные значения</h2>
+      <ul>
+        <li><code>width</code></li>
+        <li><code>height</code></li>
+        <li><code>inline-size</code></li>
+        <li><code>block-size</code></li>
+        <li><code>aspect-ratio</code></li>
+        <li><code>orientation</code>*</li>
+      </ul>
+      <p>* – landscape, работает когда высота больше ширины.</p>
+    </section>
+
+    <section class="slide">
+      <h2><code>@container</code> более удобные сравнения</h2>
+      <pre>
+        <code>@container (max-width: 300px)</code>
+        <code class="next">@container (min-width: 30em)</code>
+        <code class="next">@container (min-width: 30em) and (max-width: 40em)</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>@container (width >= 300px)</code>
+        <code class="next">@container (width <= 30em)</code>
+        <code class="next">@container (30em <= width <= 40em)</code>
+        <code class="next">@container (30em <= width <= 40em) and (--togled = true)</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>CSS Container Units</h2>
+      <table>
+        <tr>
+          <td><code>cqw</code></td>
+          <td>1% от ширины контейнера</td>
+        </tr>
+        <tr>
+          <td><code>cqh</code></td>
+          <td>1% от высоты контейнера</td>
+        </tr>
+        <tr>
+          <td><code>cqi</code></td>
+          <td>1% от инлайн размера контейнера</td>
+        </tr>
+        <tr>
+          <td><code>cqb</code></td>
+          <td>1% от блок размера контейнера</td>
+        </tr>
+        <tr>
+          <td><code>cqmin</code></td>
+          <td>Меньшее значение между cqi и cqb</td>
+        </tr>
+        <tr>
+          <td><code>cqmax</code></td>
+          <td>Большее значение между cqi и cqb</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Вроде бы это все, но нет</h2>
+    </section>
+
+    <section class="slide clear black">
+      <video id="demo-video" class="place w-full" controls muted loop src="./assets/demo.mp4"></video>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">
+        <a href="https://mephi.dev/ccqu">mephi.dev/ccqu</a>
+      </h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">
+        <a href="https://twitter.com/mephistorine">@mephistorine</a>
+      </h2>
+    </section>
+
+    <!-- endregion -->
+
+    <!--<footer class="badge">
+      <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+    </footer>-->
+
+    <div class="progress"></div>
+    <script src="shower/shower.js"></script>
+  </body>
+</html>

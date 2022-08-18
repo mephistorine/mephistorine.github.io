@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NestJS - бэкенд для фронтедеров</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
+    <link rel="stylesheet" href="assets/styles/index.css">
+  </head>
+  <body class="shower list">
+
+    <header class="caption">
+      <h1>NestJS - бэкенд для фронтедеров</h1>
+      <p>
+        <a href='https://twitter.com/_stylesam'>Сэм Булатов</a>, <a href="https://firstmk.ru">Первая мониторинговая компания</a>
+      </p>
+    </header>
+
+    <section class="slide">
+      <img class='nest-logo' src="assets/images/logos/nest-js-text-logo.svg" alt="">
+      <h2 class='main-title'>NestJS - бэкенд для фронтедеров</h2>
+    </section>
+
+    <section class="slide">
+      <div class="profile">
+        <div class="avatar">
+          <img src="assets/images/sam3.jpg" alt="">
+        </div>
+        <div class="job">Просто Фронтендер</div>
+        <div class="name">
+          <h2>Сэм Булатов</h2>
+        </div>
+        <div class="link">
+          <a href="https://twitter.com/_stylesam">@_stylesam</a>
+        </div> 
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout small-shout">Место для вашего дисклеймера</h2>
+      <p class='note place bottom'>+7 999 999 99 99</p>
+    </section>
+
+    <section class="slide to-js" id='about-nestjs'>
+      <div class="about-nestjs grid-4x4">
+        <div class="logo">
+          <img src="assets/images/logos/nest-logo-small.svg" alt="">
+          <a href="https://nestjs.com/">https://nestjs.com/</a>
+        </div>
+        <div class="creator">
+          <div class="creator-inner">
+            <h2>Kamil Myśliwiec</h2>
+            <ul>
+              <li><a href="https://kamilmysliwiec.com/">website</a></li>
+              <li><a href="https://twitter.com/kammysliwiec">@kammysliwiec</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="data-of-creation next">
+          <time datetime="2017-02-04T20:12:52Z">4 Февраля 2017</time>
+        </div>
+        <div class="github-stars next">
+          <span>⭐️ 18433</span>
+          <span class="value"></span>
+        </div>
+      </div>
+    </section>
+
+<!--     <section class="slide">
+  <h2>Проблемы Express</h2>
+  <ul>
+    <li>Callback-hell (Ад функций обратного вызова)</li>
+    <li>Построение архитектуры</li>
+    <li>Валидация</li>
+    <li>Подключение к базам данных</li>
+    <li>Тестирование</li>
+  </ul>
+</section> -->
+
+    <section class="slide">
+      <h2 class="shout">Основные сущности</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">1. Модули</h2>
+    </section>
+
+    <section class="slide about-module clear">
+      <div class="module-components grid-4x4">
+        <div><code>controllers</code></div>
+        <div class='next'><code>providers</code></div>
+        <div class='next'><code>imports</code></div>
+        <div class='next'><code>exports</code></div>
+      </div>
+    </section>
+
+    <section class="slide is-align-content-middle">
+      <pre>
+        <code>@Module({</code>
+        <code>  controllers: [ AppController ],</code>
+        <code>  providers: [ AppService ],</code>
+        <code>  imports: [ TypegooseModule.forRoot() ],</code>
+        <code>  exports: [ ],</code>
+        <code>})</code>
+        <code>export class AppModule {</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">2. Провайдеры</h2>
+    </section>
+
+    <section class="slide is-align-content-middle">
+      <pre>
+        <code class='next mark'>@Injectable()</code>
+        <code>export class AppService {</code>
+        <code class='next mark'>  constructor(private httpService: <strong>HttpService</strong>,</code>
+        <code class='next mark'>              @Inject('INJECTION_TOKEN')
+              private someProvider) {</code>
+        <code>  }</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Область видимости провайдеров</h2>
+      <div class="columns two">
+        <pre>
+          <code>@Injectable({</code>
+          <code>  scope: Scope.DEFAULT</code>
+          <code>})</code>
+          <code>class AppService {</code>
+          <code>}</code>
+        </pre>
+        <pre class='next'>
+          <code>enum Scope {</code>
+          <code>  DEFAULT,</code>
+          <code>  TRANSIENT,</code>
+          <code>  REQUEST</code>
+          <code>}</code>
+        </pre>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>Кастомные провайдеры</h2>
+        <pre>
+          <code>{</code>
+          <code>  provide: 'FACTORY',</code>
+          <code class='mark next'>  useFactory: (helloService: <strong>HelloService</strong>) => {
+    return ...
+  }</code>
+          <code class='mark next'>  inject: [ HelloService ]</code>
+          <code>}</code>
+        </pre>
+      </div>
+
+      <footer class="footer">
+        Не забыть упомянуть про export пользовательских провайдеров
+      </footer>
+    </section>
+
+    <section class="slide is-align-content-middle">
+      <div class="columns two">
+        <pre>
+          <code>{</code>
+          <code>  provide: 'OPTIONS',</code>
+          <code>  useClass: Options,</code>
+          <code class='next mark is-normal-width'>  scope: Scope.DEFAULT</code>
+          <code>}</code>
+        </pre>
+        <pre class='next'>
+          <code>{</code>
+          <code>  provide: 'DATABASE_URL',</code>
+          <code>  useValue: 'mongodb://...'</code>
+          <code>}</code>
+        </pre>
+      </div>
+      <p class='note next place bottom'>Так же есть и <code>useExist</code>, чтобы перебивать другие провайдеры</p>
+    </section>
+
+    <section class="slide">
+      <h2>Пайпы</h2>
+      <pre>
+        <code>@Injectable()</code>
+        <code>export class ValidationPipe implements <em>PipeTransform</em> {</code>
+        <code>  transform(value: <strong>any</strong>, metadata: <strong>ArgumentMetadata</strong>) {</code>
+        <code>    return value</code>
+        <code>  }</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>interface ArgumentMetadata {</code>
+        <code>  readonly type: 'body' | 'query' | 'param' | 'custom'</code>
+        <code>  readonly metatype?: Type&lt;any&gt;</code>
+        <code>  readonly data?: string</code>
+        <code>}</code>
+      </pre>
+      <div class="next">
+        <h2>Как использовать</h2>
+        <pre>
+          <code>@UsePipes(new ValidationPipe())</code>
+          <code>public createUser(@Body(<strong>'user'</strong>) user: <strong>UserDto</strong>) { }</code>
+        </pre>
+      </div>
+
+      <footer class="footer">
+        <p>Так же пайпы можно использовать глобально</p>
+      </footer>
+    </section>
+
+    <section class="slide">
+      <h2>Guards</h2>
+      <pre>
+        <code>@Injectable()</code>
+        <code>export class AuthGuard implements CanActivate {</code>
+        <code>  canActivate(context: ExecutionContext): boolean | Promise&lt;boolean&gt; | Observable&lt;boolean&gt; {</code>
+        <code>    const request = context.switchToHttp().getRequest()</code>
+        <code>    return validateRequest(request)</code>
+        <code>  }</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">3. Контроллеры</h2>
+    </section>
+
+    <section class="slide is-align-content-middle">
+      <pre>
+        <code>@Controller(<strong>'/users'</strong>)</code>
+        <code>export class UsersController {</code>
+        <div class="next">
+          <code>  @Get(<strong>':id'</strong>)</code>
+          <code>  public getUser(<span class='next'>@Param('id') id: string</span>) {</code>
+          <code class='next'>    return { name: 'Sam', id: 124 }</code>
+          <code>  }</code>
+        </div>
+        <code>}</code>
+        </pre>
+    </section>
+    
+    <section class="slide is-align-content-middle">
+      <pre>
+        <code>...</code>
+        <code>  @Get(':id')</code>
+        <code>  public getUser(@Param('id') id: string) {</code>
+        <code>    return <b>of</b>({ name: 'Sam', id: 124 })</code>
+        <code>  }</code>
+        <code>...</code>
+      </pre>
+    </section>
+
+    <section class="slide is-align-content-middle">
+      <pre>
+        <code>...</code>
+        <code>  @Post(':id')</code>
+        <code class='next'>  @UsePipes(new ValidationPipe())</code>
+        <code>  public createUser(@Param('id') id: string,
+                    <span class='next'><b>@Body()</b> user: <b>UserDto</b></span>) {</code>
+        <code>    return of({ name: 'Sam', id: 124 })</code>
+        <code>  }</code>
+        <code>...</code>
+      </pre>
+    </section>
+
+    <sections class="slide is-align-content-middle">
+      <div class='is-tac'>
+        <h2>class-validator</h2>
+        <h2>class-transformer</h2>
+      </div>
+    </sections>
+
+    <section class="slide is-align-content-middle">
+      <pre>
+        <code>export class UserDto {</code>
+        <code>  @IsNotEmpty()</code>
+        <code>  @IsString()</code>
+        <code>  public name: string</code>
+        <code> </code>
+        <div class="next">
+          <code>  @IsEnum(Role)</code>
+          <code>  public role: Role</code>
+        </div>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Reflection API</h2>
+      <h3>reflect-metadata</h3>
+      <pre>
+        <code>Reflect.getMetadata('design:paramtypes', AppService)</code>
+        <code class='comment'>// [ HttpService ]</code>
+      </pre>
+    </section>
+
+    <section class='slide'>
+      <pre>
+        <code>...</code>
+        <code>  @SetMetadata('roles', [ 'admin' ])</code>
+        <code>  @Get(':id')</code>
+        <code>  public getUser(@Param('id') id: string) {</code>
+        <code>    return <b>of</b>({ name: 'Sam', id: 124 })</code>
+        <code>  }</code>
+        <code>...</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>@Injectable()</code>
+        <code>export class AuthGuard implements CanActivate {</code>
+        <code class='next mark'>  constructor(private reflector: Reflector) {}</code>
+        <code>  canActivate(context: ExecutionContext): boolean | Promise&lt;boolean&gt; | Observable&lt;boolean&gt; {</code>
+        <code class='next mark'>    const roles = this.reflector
+          .get('roles', context.getHandler())</code>
+        <code>    return true</code>
+        <code>  }</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Экосистема</h2>
+    </section>
+    
+    <section class="slide">
+      <h2 class="shout">
+        MongoDB
+      </h2>
+    </section>
+
+    <section class="slide">
+      <h3>Адаптеры</h3>
+      <ul>
+        <li>Mongoose</li>
+        <li>Mongorito</li>
+        <li>Camo</li>
+        <li>... и другие</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Typegoose</h2>
+      <pre>
+        <code>class User extends Typegoose {</code>
+        <code class='mark'>  @prop({ required: true })</code>
+        <code class='mark'>  name: string</code>
+        <code>  @prop({ unique: true })</code>
+        <code>  login: string</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Референции</h2>
+      <pre>
+        <code>class Article extends Typegoose {</code>
+        <code>  @prop({ ref: User })</code>
+        <code>  name: Ref&lt;User&gt;</code>
+        <div class="next">
+          <code>  @arrayProp({ itemsRef: Tag })</code>
+          <code>  tags: Ref&lt;Tag&gt;[]</code>
+        </div>
+        <code>}</code>
+      </pre>
+    </section>
+    
+    <section class="slide">
+      <h2>nestjs-typegoose</h2>
+      <h3>DI для моделей</h3>
+      <pre>
+        <code>@Module({</code>
+        <code>  imports: [</code>
+        <code>    TypegooseModule.forRoot(<span class='next'>'mongodb://...',</span> <span class='next'>{ ...options }</span>)</code>
+        <code>  ]</code>
+        <code>})</code>
+        <code>export class AppModule { }</code>
+      </pre>
+    </section>
+
+    <section class="slide is-align-content-middle">
+      <pre>
+        <code>@Module({</code>
+        <code>  imports: [</code>
+        <code>    TypegooseModule<span class='next'>.forFeature(<b>[ User ]</b>)</span> </code>
+        <code>  ]</code>
+        <code>})</code>
+        <code>export class UserModule { }</code>
+      </pre>
+    </section>
+
+    <section class="slide is-align-content-middle">
+      <pre>
+        <code>@Injectable()</code>
+        <code>export class UserService {</code>
+        <code>  constructor(@<b>InjectModel</b>(User)
+              <span class='next'>private userModel: <b>ModelType</b>&lt;UserDto&gt;</span> ) {
+        </code>
+        <code>  }</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Веб-сокеты</h2>
+    </section>
+
+    <section class="slide is-align-content-middle">
+      <pre>
+        <code>@WebSocketGateway(80, { path: '/geo' })</code>
+        <code>export class GeoPositionWebSocket <span class='next''>implements
+            OnGatewayConnection, OnGatewayDisconnect</span> {</code>
+        <div class="next">
+            <code>  public handleConnection(client, ...args) {}</code>
+            <code>  public handleDisconnect(client) {}</code>    
+        </div>
+        <code>}</code>
+      </pre>
+      <p class="note next">Веб сокет не будет работать, пока его не добавят в список провайдеров какого-нибудь модуля</p>
+    </section>
+
+    <section class="slide is-align-content-middle">
+      <pre>
+        <code>export class GeoPositionWebSocket {</code>
+        <code>  @SubscribeMessage('position')</code>
+        <code>  public handlePosition(client, position) {</code>
+        <code class='next'>    this.positionService.emitClientPosition(position)</code>
+        <code>  }</code>
+        <code>}</code>
+      </pre>
+
+      <footer class="footer">
+        То же может возвращать Observable
+      </footer>
+    </section>
+
+    <section class="slide is-align-content-middle">
+      <pre>
+        <code>export class GeoPositionWebSocket {</code>
+        <code>  @WebSocketServer()</code>
+        <code>  private server</code>
+        <div class="next">
+          <code>  public emitDataToClient(data) {</code>
+          <code>    this.server.emit(data)</code>
+          <code>  }</code>
+        </div>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide is-align-content-middle">
+      <pre>
+        <code>export class PositionService {</code>
+        <code>  constructor(private geoPosSocket: GeoPositionWebSocket) {}</code>
+        <div class="next">
+          <code>  public emitResponse(data) {</code>
+          <code>    this.geoPosSocket.emitDataToClient(data)</code>
+          <code>  }</code>
+        </div>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>nest-schedule</h2>
+      <pre>
+        <code>@Injectable()</code>
+        <code>export class PositionScheduler extends NestScheduler {</code>
+        <code>  constructor(private geoPosSocket: GeoPositionWebSocket) { super() }</code>
+        <div class="next">
+          <code>  @Interval(10 * 1000)</code>
+          <code>  public emitData() { ... }</code>
+        </div>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Документация</h2>
+    </section>
+
+    <section class="slide">
+      <h2>Swagger</h2>
+      <pre>
+        <code>const app = await NestFactory.create(ApplicationModule)</code>
+        <code class='next'>const options = new DocumentBuilder()
+  .setTitle('Cats example')
+  .addBearerAuth()
+  .build()</code>
+        <code class='next'>const document = SwaggerModule.createDocument(app, options)</code>
+        <code class='next'>SwaggerModule.setup('api', app, document)</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>@<b>ApiUseTags</b>('users-controller')</code>
+        <code>@Controller('users')</code>
+        <code>export class CatsController {}</code>
+        <code class='next'>  @ApiOperation({ title: 'Удалить пользователя' })</code>
+        <code class='next'>  @ApiBearerAuth()</code>
+        <div class="next">
+          <code>  @Delete()</code>
+          <code>  public deleteUser() {}</code>
+        </div>
+        <code>}</code>
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <img src="assets/images/swagger.png" class='place' alt="">
+    </section>
+
+    <section class="slide is-align-content-middle">
+      <pre>
+        <code>export class UserDto {</code>
+        <code>  @ApiModelProperty()</code>
+        <code>  public name: string</code>
+        <code> </code>
+        <code>  @ApiModelProperty()</code>
+        <code>  public role: Role</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <img src="assets/images/swagger-dto.png" class='place' alt="">
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="slide useful-links">
+      <h2>Полезные ссылки</h2>
+      <ul>
+        <li><a href="https://krd.dev">https://krd.dev</a> - 24-25 августа <abbr title="Krasnodar Dev Days #4">KDD #4</abbr></li>
+        <li><a href="https://t.me/krddevdays">https://t.me/krddevdays</a></li>
+        <li><a href="https://t.me/nestjs">https://t.me/nestjs</a> [en]</li>
+        <li><a href="https://t.me/nest_ru">https://t.me/nest_ru</a> [ru]</li>
+      </ul>
+
+      <ul>
+        <li>
+          <a href="https://twitter.com/_stylesam">twitter - @_stylesam</a>
+        </li>
+        <li>
+          <a href="https://t.me/stylesam">telegram - @stylesam</a>
+        </li>
+        <li>
+          <a href="https://vk.com/stylesam">vk - @stylesam</a>
+        </li>
+      </ul>
+      
+      <div class="logos">
+        <img src="assets/images/logos/krasnodar-dev-days-logo.svg" alt="">
+        <img class='firstmk-logo' src="assets/images/logos/firstmk.png" alt="">
+      </div>
+    </section>
+
+    <footer class="badge">
+      <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+    </footer>
+
+    <div class="progress"></div>
+
+    <script src="node_modules/shower-core/shower.min.js"></script>
+    <script src="assets/scripts/rx.js"></script>
+
+    <script type="module" src='assets/scripts/main.js'></script>
+    <!-- Copyright © 2019 Yours Truly, Famous Inc. -->
+
+  </body>
+</html>

@@ -1,0 +1,100 @@
+{
+  "rules": {
+    "no-debugger": true,
+    "variable-name": [
+      true,
+      "ban-keywords"
+    ],
+    "class-name": true,
+    "comment-format": [
+      true,
+      "check-space"
+    ],
+    "indent": [
+      true,
+      "spaces",
+      2
+    ],
+    "one-line": [
+      true,
+      "check-open-brace",
+      "check-whitespace"
+    ],
+    "curly": false,
+    "no-var-keyword": true,
+    "quotemark": [
+      true,
+      "single",
+      "avoid-escape"
+    ],
+    "strict-boolean-expressions": false,
+    "semicolon": [
+      false,
+      "never"
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-module",
+      "check-separator",
+      "check-type"
+    ],
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      },
+      {
+        "call-signature": "onespace",
+        "index-signature": "onespace",
+        "parameter": "onespace",
+        "property-declaration": "onespace",
+        "variable-declaration": "onespace"
+      }
+    ],
+    "no-internal-module": true,
+    "no-trailing-whitespace": [
+      true,
+      "ignore-blank-lines"
+    ],
+    "no-null-keyword": false,
+    "jsdoc-format": false,
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "never",
+        "singleline": "never"
+      }
+    ],
+    "max-line-length": [
+      true,
+      160
+    ],
+    "no-increment-decrement": false,
+    "eofline": false,
+    "array-bracket-spacing": [
+      true,
+      "always"
+    ],
+    "no-consecutive-blank-lines": [
+      true,
+      2
+    ],
+    "align": false,
+    "prefer-const": true,
+    "ter-arrow-parens": false,
+    "ter-computed-property-spacing": [
+      false,
+      "always"
+    ],
+    "one-variable-per-declaration": false,
+    "no-unused-variable": false,
+    "prefer-template": false
+  }
+}

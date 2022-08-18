@@ -1,0 +1,29 @@
+:root {
+  --master-color: #8870ff;
+}
+
+.shower.list {
+  background-color: hsl(0deg 0% 10%);
+  --slide-scale: 0.4;
+}
+
+.caption {
+  color: white;
+}
+
+.caption a {
+  color: var(--master-color);
+}
+
+.progress::before {
+  background-color: var(--master-color);
+}
+
+.slide ul > li:lang(ru)::before,
+.slide ol > li::before {
+  color: var(--master-color);
+}
+
+.slide code, .slide kbd, .slide samp {
+  font-family: "Cascadia Code", "PT Mono", monospace;
+}
