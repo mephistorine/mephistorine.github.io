@@ -1,0 +1,11 @@
+.slide .statement {
+  font-weight: 600;
+  line-height: 1.2;
+  top: 50%;
+  left: 0;
+  position: absolute;
+  transform: translateY(-50%);
+  font-size: 50px;
+  padding: 0 100px;
+  margin: 0;
+}

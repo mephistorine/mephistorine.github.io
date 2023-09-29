@@ -1,0 +1,30 @@
+/* Basic */
+
+.slide h2 {
+  margin-bottom: 33px;
+  color: black;
+  font: bold 50px/1 "IBM Plex Sans", sans-serif;
+}
+
+.slide h3 {
+  margin-bottom: 15px;
+  color: black;
+  font: bold 30px/1 "IBM Plex Sans", sans-serif;
+}
+
+.slide * + h2 {
+  margin-top: 41px;
+}
+
+.slide p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.slide p.note {
+  color: var(--color-grey);
+}
+
+.slide figure {
+  margin: 0;
+}

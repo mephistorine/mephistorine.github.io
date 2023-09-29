@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Есть только клиент, или Что делать, если вы не хотите писать бэкенд</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="stylesheet" href="shower/themes/mephi/styles/styles.css">
+    <script src="tailwindcss.min.js"></script>
+    <script>
+        tailwind.config = {
+            important: true,
+            /*theme: {
+                colors: {
+                    primary: "#8870FF"
+                }
+            }*/
+        }
+    </script>
+
+    <style>
+        .slide:not(.clear) {
+            background-position: bottom 10px right 10px;
+            background-image: url("./pictures/tinkoff.svg");
+            background-repeat: no-repeat;
+            background-size: 7%;
+        }
+    </style>
+</head>
+
+<body class="shower list">
+
+<header class="caption">
+    <h1>Есть только клиент, или Что делать, если вы не хотите писать бэкенд</h1>
+    <p>Сэм Булатов, Тинькофф, <a href="https://krd.dev">krd.dev</a></p>
+</header>
+
+<section class="slide clear bg-[url('./pictures/fc23-title-2.png')] bg-contain">
+    <h2>Есть только клиент,<br> или Что делать, если вы не хотите писать бэкенд</h2>
+    <p>Сэм Булатов, Тинькофф</p>
+    <!--    <h2 class="!text-[75px] !m-0 shout-section">Есть <span class="text-blue-500">только клиент</span>, или Что делать, если вы <span class="text-yellow-300">не хотите</span> писать бэкенд</h2>-->
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">Еще один пет-проект</h2>
+</section>
+
+<section class="slide">
+    <h2>Некоторые фичи, которые я хочу</h2>
+    <ul>
+        <li class="next">Веб</li>
+        <li class="next">Возможность работы с нескольких устройств</li>
+        <li class="next">Офлайн</li>
+        <li class="next">...</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">Хочу офлайн!</h2>
+</section>
+
+<section class="slide">
+    <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.5]" src="./pictures/html5_offline_storage.svg" alt="">
+</section>
+
+<section class="slide p-0">
+    <div class="flex">
+        <section>
+            <img class="block h-[var(--slide-height)] object-cover" src="./pictures/sam-bulatov.png" alt="">
+        </section>
+        <section class="py-8 px-16">
+            <h2>Сэм Булатов</h2>
+            <ul>
+                <li>Фронтенд разработчик в Тинькофф</li>
+                <li>Уже 5 месяцев экспериментирую с темой офлайна</li>
+                <li>За это время смог написать MVP приложение</li>
+            </ul>
+        </section>
+    </div>
+</section>
+
+<section class="slide clear black">
+    <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" src="./pictures/figma-offline.png"
+         alt="Figma работает в офлайн режиме">
+    <img class="next absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" src="./pictures/notion-offline.png"
+         alt="Notion работает в офлайн режиме">
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">Offline-first<span class="next">?</span></h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">Для Offline-first нужно писать бекенд!</h2>
+</section>
+
+<section class="slide">
+    <h2>Проблемы</h2>
+    <ol>
+        <li class="text-[40px]">Без бекенда!</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">А где хранить данные?</h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">Очевидно. На фронтенде.</h2>
+</section>
+
+<section class="slide">
+    <h2>Где можно хранить данные на фронтенде</h2>
+    <ul>
+        <li class="next">Cookies</li>
+        <li class="next">Web Storage</li>
+        <li class="next">Cache API</li>
+        <li class="next">IndexedDB</li>
+        <li class="next">Origin Private File System (OPFS)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">IndexedDB!</h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">А если устройств много?</h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">А если пользователей много?</h2>
+</section>
+
+<section class="slide">
+    <h2>Проблемы</h2>
+    <ol>
+        <li>Без бекенда!</li>
+        <li class="text-[40px]">Авторизация</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Проблемы</h2>
+    <ol>
+        <li>Без бекенда!</li>
+        <li>Авторизация</li>
+        <li class="text-[40px]">Синхронизация</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[3]"
+         src="./pictures/logux-logotype-light.svg" alt="">
+</section>
+
+<section class="slide">
+    <pre style="background-color: #fff">
+        <code><span style="color: #CF222E">export</span><span
+                style="color: #24292F"> </span><span style="color: #CF222E">const</span><span
+                style="color: #24292F"> </span><span style="color: #8250DF">User</span><span
+                style="color: #24292F"> </span><span
+                style="color: #CF222E">=</span><span style="color: #24292F"> ({ </span><span
+                style="color: #953800">userId</span><span style="color: #24292F"> }) </span><span
+                style="color: #CF222E">=&gt;</span><span
+                style="color: #24292F"> {</span></code>
+        <code><span style="color: #24292F">  </span><span style="color: #CF222E">const</span><span
+                style="color: #24292F"> </span><span style="color: #0550AE">isSubscribing</span><span
+                style="color: #24292F"> </span><span style="color: #CF222E">=</span><span
+                style="color: #24292F"> </span><span
+                style="color: #8250DF">useSubscription</span><span style="color: #24292F">([</span><span
+                style="color: #0A3069">`user/${</span><span
+                style="color: #0A3069"> </span><span style="color: #24292F">userId</span><span
+                style="color: #0A3069"> </span><span style="color: #0A3069">}`</span><span
+                style="color: #24292F">])</span></code>
+        <code><span style="color: #24292F">  </span><span style="color: #CF222E">const</span><span
+                style="color: #24292F"> </span><span style="color: #0550AE">user</span><span
+                style="color: #24292F"> </span><span style="color: #CF222E">=</span><span
+                style="color: #24292F"> </span><span
+                style="color: #8250DF">useSelector</span><span style="color: #24292F">(</span><span
+                style="color: #953800">state</span><span style="color: #24292F"> </span><span
+                style="color: #CF222E">=&gt;</span><span style="color: #24292F"> state.users[userId])</span></code>
+        <code><span style="color: #24292F">  </span><span style="color: #CF222E">if</span><span style="color: #24292F"> (isSubscribing) {</span></code>
+        <code><span style="color: #24292F">    </span><span style="color: #CF222E">return</span><span
+                style="color: #24292F"> &lt;</span><span
+                style="color: #116329">Loader</span><span style="color: #24292F"> /&gt;</span></code>
+        <code><span style="color: #24292F">  } </span><span style="color: #CF222E">else</span><span
+                style="color: #24292F"> {</span></code>
+        <code><span style="color: #24292F">    </span><span style="color: #CF222E">return</span><span
+                style="color: #24292F"> &lt;</span><span
+                style="color: #116329">Name</span><span style="color: #24292F">&gt;</span><span
+                style="color: #CF222E">{</span><span style="color: #24292F">user.name</span><span
+                style="color: #CF222E">}</span><span style="color: #24292F">&lt;/</span><span style="color: #116329">Name</span><span
+                style="color: #24292F">&gt;</span></code>
+        <code><span style="color: #24292F">  }</span></code>
+        <code><span style="color: #24292F">}</span></code>
+    </pre>
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">Настоящий offline-first. <span class="next">Но нужен бекенд.</span></h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">Зато я узнал про <span class="text-blue-500">CRDT</span>!</h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">
+        <span><span class="text-blue-500">C</span><span class="next">onflict-free</span></span><br>
+        <span><span class="text-blue-500">R</span><span class="next">eplicated</span></span><br>
+        <span><span class="text-blue-500">D</span><span class="next">ata</span></span><br>
+        <span><span class="text-blue-500">T</span><span class="next">ype</span></span><br>
+    </h2>
+</section>
+
+<section class="slide">
+    <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.5]" src="https://mermaid.ink/svg/pako:eNpVj70OgzAMhF8l9QwvkKFSJYYO7VLGhsElTkHkp0qTIoR49ybAgiffp_PJN0PrJAEHpd3YdugDuz2EZWlqNKwsz-z1vJLW7tSsSm2Kjc5rubPhwBivmi3hoidncbXIQ8hvV9mawQAFGPIGe5lemfO1gNCRIQE8rZIURh0ECLskK8bg6sm2wIOPVED8SAxU9fj2aIAr1N9ESfbB-ftWb225_AE2U0tR" alt="">
+</section>
+
+<section class="slide">
+    <h2></h2>
+    <ol>
+        <li class="next">Приложение может обновить любую реплику независимо</li>
+        <li class="next">Все конфликты разрешаются автоматически</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">Пример</h2>
+</section>
+
+<section class="slide">
+    <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.5]" src="https://mermaid.ink/svg/pako:eNpVjzELwjAQhf9KuLUtqNAlg4uOuuiYdDiSS1vaJhITREr_uzHBwRuO7x7vHncrKKcJOJjZvdSAPrDLTVqW6uSiDeT3rGmOTIldl8GIqi00iLYrztJNVqcy9MUi7V_WIav4y-pFtS80pSyoYSG_4KjTOet3T0IYaCEJPKEmg3EOEqTdkhVjcPe3VcCDj1RDfGgMdB6x97gANzg_k0p6DM5fy4v50-0DgEtH_A" alt="">
+</section>
+
+<section class="slide">
+    <pre style="background-color: #fff" class="center-y"><code><span style="color: #CF222E">interface</span><span
+            style="color: #24292F"> </span><span style="color: #953800">GCounter</span><span
+            style="color: #24292F"> {</span></code>
+    <code class="next"><span style="color: #24292F">  </span><span style="color: #8250DF">getValue</span><span
+            style="color: #24292F">()</span><span style="color: #CF222E">:</span><span
+            style="color: #24292F"> </span><span style="color: #0550AE">number</span></code>
+    <code class="next"><span style="color: #24292F">  </span><span style="color: #8250DF">increment</span><span
+            style="color: #24292F">(</span><span style="color: #953800">value</span><span
+            style="color: #CF222E">:</span><span style="color: #24292F"> </span><span
+            style="color: #0550AE">number</span><span style="color: #24292F">)</span><span
+            style="color: #CF222E">:</span><span style="color: #24292F"> </span><span style="color: #0550AE">void</span></code>
+    <code class="next"><span style="color: #24292F">  </span><span style="color: #8250DF">merge</span><span
+            style="color: #24292F">(</span><span style="color: #953800">otherCounter</span><span style="color: #CF222E">:</span><span
+            style="color: #24292F"> </span><span style="color: #953800">GCounter</span><span
+            style="color: #24292F">)</span><span style="color: #CF222E">:</span><span
+            style="color: #24292F"> </span><span style="color: #0550AE">void</span></code>
+    <code><span style="color: #24292F">}</span></code></pre>
+</section>
+
+<section class="slide">
+    <pre style="background-color: #fff">
+        <code><span style="color: #CF222E">class</span><span
+                style="color: #24292F"> </span><span style="color: #953800">GCounterImpl</span><span
+                style="color: #24292F"> </span><span style="color: #CF222E">implements</span><span
+                style="color: #24292F"> </span><span style="color: #0550AE">GCounter</span><span
+                style="color: #24292F"> {</span></code>
+<code><span style="color: #24292F">  </span><span style="color: #CF222E">private</span><span
+        style="color: #24292F"> </span><span style="color: #953800">value</span><span
+        style="color: #CF222E">:</span><span style="color: #24292F"> </span><span
+        style="color: #0550AE">number</span></code>
+<code><span style="color: #24292F">  </span><span style="color: #CF222E">constructor</span><span style="color: #24292F">(</span><span
+        style="color: #953800">initialValue</span><span style="color: #CF222E">:</span><span
+        style="color: #24292F"> </span><span style="color: #0550AE">number</span><span
+        style="color: #24292F"> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> </span><span
+        style="color: #0550AE">0</span><span style="color: #24292F">) {</span></code>
+<code><span style="color: #24292F">    </span><span style="color: #0550AE">this</span><span style="color: #24292F">.value </span><span
+        style="color: #CF222E">=</span><span style="color: #24292F"> initialValue</span></code>
+<code><span style="color: #24292F">  }</span></code>
+<code><span style="color: #24292F">  </span><span style="color: #CF222E">public</span><span
+        style="color: #24292F"> </span><span style="color: #8250DF">getValue</span><span
+        style="color: #24292F">()</span><span style="color: #CF222E">:</span><span style="color: #24292F"> </span><span
+        style="color: #0550AE">number</span><span style="color: #24292F"> {</span></code>
+<code><span style="color: #24292F">    </span><span style="color: #CF222E">return</span><span
+        style="color: #24292F"> </span><span style="color: #0550AE">this</span><span
+        style="color: #24292F">.value</span></code>
+<code><span style="color: #24292F">  }</span></code>
+<code><span style="color: #24292F">}</span></code></pre>
+</section>
+
+<section class="slide">
+<pre style="background-color: #fff"><code><span style="color: #CF222E">class</span><span style="color: #24292F"> </span><span
+        style="color: #953800">GCounterImpl</span><span style="color: #24292F"> </span><span style="color: #CF222E">implements</span><span
+        style="color: #24292F"> </span><span style="color: #0550AE">GCounter</span><span
+        style="color: #24292F"> {</span></code>
+<code><span style="color: #24292F">  </span><span style="color: #6E7781">// ...</span></code>
+<code><span style="color: #24292F">  </span><span style="color: #CF222E">public</span><span
+        style="color: #24292F"> </span><span style="color: #8250DF">increment</span><span
+        style="color: #24292F">(</span><span style="color: #953800">num</span><span style="color: #CF222E">:</span><span
+        style="color: #24292F"> </span><span style="color: #0550AE">number</span><span
+        style="color: #24292F">)</span><span style="color: #CF222E">:</span><span style="color: #24292F"> </span><span
+        style="color: #0550AE">void</span><span style="color: #24292F"> {</span></code>
+<code><span style="color: #24292F">    </span><span style="color: #0550AE">this</span><span style="color: #24292F">.value </span><span
+        style="color: #CF222E">=</span><span style="color: #24292F"> </span><span
+        style="color: #0550AE">this</span><span style="color: #24292F">.value </span><span
+        style="color: #CF222E">+</span><span style="color: #24292F"> num;</span></code>
+<code><span style="color: #24292F">  }</span></code>
+<code><span style="color: #24292F">  </span><span style="color: #CF222E">public</span><span
+        style="color: #24292F"> </span><span style="color: #8250DF">merge</span><span
+        style="color: #24292F">(</span><span style="color: #953800">otherCounter</span><span
+        style="color: #CF222E">:</span><span style="color: #24292F"> </span><span style="color: #953800">GCounter</span><span
+        style="color: #24292F">)</span><span style="color: #CF222E">:</span><span style="color: #24292F"> </span><span
+        style="color: #0550AE">void</span><span style="color: #24292F"> {</span></code>
+<code><span style="color: #24292F">    </span><span style="color: #0550AE">this</span><span style="color: #24292F">.value </span><span
+        style="color: #CF222E">=</span><span style="color: #24292F"> Math.</span><span style="color: #8250DF">max</span><span
+        style="color: #24292F">(</span><span style="color: #0550AE">this</span><span style="color: #24292F">.value, otherCounter.</span><span
+        style="color: #8250DF">getValue</span><span style="color: #24292F">())</span></code>
+<code><span style="color: #24292F">  }</span></code>
+<code><span style="color: #24292F">}</span></code></pre>
+</section>
+
+<section class="slide">
+    <pre style="background-color: #fff"><code><span style="color: #CF222E">const</span><span
+            style="color: #24292F"> </span><span style="color: #0550AE">counter1</span><span
+            style="color: #24292F"> </span><span style="color: #CF222E">=</span><span
+            style="color: #24292F"> </span><span style="color: #CF222E">new</span><span
+            style="color: #24292F"> </span><span style="color: #8250DF">GCounterImpl</span><span style="color: #24292F">()</span></code>
+<code><span style="color: #CF222E">const</span><span style="color: #24292F"> </span><span style="color: #0550AE">counter2</span><span
+        style="color: #24292F"> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> </span><span
+        style="color: #CF222E">new</span><span style="color: #24292F"> </span><span
+        style="color: #8250DF">GCounterImpl</span><span style="color: #24292F">()</span></code>
+<code><br></code>
+<code><span style="color: #24292F">counter1.</span><span style="color: #8250DF">increment</span><span
+        style="color: #24292F">(</span><span style="color: #0550AE">5</span><span style="color: #24292F">) </span><span
+        style="color: #6E7781">// 5</span></code>
+<code><span style="color: #24292F">counter2.</span><span style="color: #8250DF">increment</span><span
+        style="color: #24292F">(</span><span style="color: #0550AE">1</span><span style="color: #24292F">) </span><span
+        style="color: #6E7781">// 1</span></code>
+<code><br></code>
+<code><span style="color: #24292F">counter1.</span><span style="color: #8250DF">merge</span><span
+        style="color: #24292F">(counter2) </span><span style="color: #6E7781">// 5</span></code>
+<code><span style="color: #24292F">counter2.</span><span style="color: #8250DF">merge</span><span
+        style="color: #24292F">(counter1) </span><span style="color: #6E7781">// 5</span></code></pre>
+</section>
+
+<section class="slide">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+        <img class="w-[300px]" src="./pictures/local-first-web-logo.svg" alt="">
+        <span class="font-bold text-[60px]">Local-first</span>
+        <span class="text-[35px]">Web Development</span>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Проблемы</h2>
+    <ol>
+        <li>Без бекенда</li>
+        <li>Авторизация</li>
+        <li>Синхронизация</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">Без бекенда</h2>
+</section>
+
+<section class="slide">
+    <h2>Варианты решения</h2>
+    <ul>
+        <li>PouchDB</li>
+        <li>Automerge</li>
+        <li>VLCN</li>
+        <li>TinyBase</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>PouchDB</h2>
+    <div class="columns two">
+        <div>
+            <p>Плюсы</p>
+            <ul>
+                <li>Hello</li>
+            </ul>
+        </div>
+        <div>
+            <p>Минусы</p>
+            <ul>
+                <li>Hello</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Automerge</h2>
+    <div class="columns two">
+        <div>
+            <p>Плюсы</p>
+            <ul>
+                <li>Hello</li>
+            </ul>
+        </div>
+        <div>
+            <p>Минусы</p>
+            <ul>
+                <li>Hello</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>TinyBase</h2>
+    <div class="columns two">
+        <div>
+            <p>Плюсы</p>
+            <ul>
+                <li>Hello</li>
+            </ul>
+        </div>
+        <div>
+            <p>Минусы</p>
+            <ul>
+                <li>Hello</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>VLCN</h2>
+    <div class="columns two">
+        <div>
+            <p>Плюсы</p>
+            <ul>
+                <li>Hello</li>
+            </ul>
+        </div>
+        <div>
+            <p>Минусы</p>
+            <ul>
+                <li>Hello</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">Авторизация</h2>
+</section>
+
+<section class="slide">
+    <h2>Варианты решения</h2>
+    <ul>
+        <li>Анонимно</li>
+        <li>Metamask (Web3)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Анонимно</h2>
+    <div class="columns two">
+        <div>
+            <p>Плюсы</p>
+            <ul>
+                <li>Hello</li>
+            </ul>
+        </div>
+        <div>
+            <p>Минусы</p>
+            <ul>
+                <li>Hello</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">Metamask</h2>
+</section>
+
+<section class="slide">
+    <pre style="background-color: #fff"><code><span style="color: #CF222E">import</span><span style="color: #24292F"> { MetaMaskSDK } </span><span style="color: #CF222E">from</span><span style="color: #24292F"> </span><span style="color: #0A3069">&#39;@metamask/sdk&#39;</span><span style="color: #24292F">;</span></code>
+<code><span style="color: #CF222E">const</span><span style="color: #24292F"> </span><span style="color: #0550AE">MMSDK</span><span style="color: #24292F"> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> </span><span style="color: #CF222E">new</span><span style="color: #24292F"> </span><span style="color: #8250DF">MetaMaskSDK</span><span style="color: #24292F">(options);</span></code>
+<code><span style="color: #CF222E">const</span><span style="color: #24292F"> </span><span style="color: #0550AE">ethereum</span><span style="color: #24292F"> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> </span><span style="color: #0550AE">MMSDK</span><span style="color: #24292F">.</span><span style="color: #8250DF">getProvider</span><span style="color: #24292F">();</span></code>
+<code><br></code>
+<code><span style="color: #24292F">ethereum.</span><span style="color: #8250DF">request</span><span style="color: #24292F">({</span></code>
+<code><span style="color: #24292F">  method: </span><span style="color: #0A3069">&#39;eth_requestAccounts&#39;</span><span style="color: #24292F">,</span></code>
+<code><span style="color: #24292F">  params: []</span></code>
+<code><span style="color: #24292F">});</span></code></pre>
+</section>
+
+<section class="slide">
+    <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.6]" src="./pictures/metamask-login.png" alt="">
+    <img class="next absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.6]" src="./pictures/metamask-accounts.png" alt="">
+</section>
+
+<section class="slide">
+    <h2>Metamask (Web3)</h2>
+    <div class="columns two">
+        <div>
+            <p>Плюсы</p>
+            <ul>
+                <li>Hello</li>
+            </ul>
+        </div>
+        <div>
+            <p>Минусы</p>
+            <ul>
+                <li>Hello</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide clear black">
+    <a href="https://youtu.be/148VLChS-eQ?si=U8u1IYN8QvKgqoVv">
+        <img class="cover" src="./pictures/maxresdefault.jpg" alt="">
+    </a>
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">Синхронизация</h2>
+</section>
+
+<section class="slide">
+    <h2>Варианты решения</h2>
+    <ul>
+        <li>HTTP</li>
+        <li>WebSockets</li>
+        <li>WebRTC</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">Для HTTP и WebSocket-ов нужнен бекенд😐</h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">Для WebRTC бекенд не нужен*😊</h2>
+</section>
+
+<section class="slide clear black">
+    <img class="place" src="./pictures/webrtc.png" alt="">
+</section>
+
+<section class="slide">
+    <h2>WebRTC</h2>
+    <div class="columns two">
+        <div>
+            <p>Плюсы</p>
+            <ul>
+                <li>Hello</li>
+            </ul>
+        </div>
+        <div>
+            <p>Минусы</p>
+            <ul>
+                <li>Hello</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">VLCN умеет в WebRTC😎</h2>
+</section>
+
+<section class="slide">
+    слайд с примером кодом
+</section>
+
+<section class="slide">
+    <h2>Итоги</h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">Спасибо!</h2>
+</section>
+
+<section class="slide">
+    <h2>С вами был <span class="text-primary">Сэм Булатов</span>!</h2>
+    <ul>
+        <li>@mephistorine</li>
+    </ul>
+    <img class="w-[50px]" src="./pictures/fc23-feedback.svg" alt="">
+</section>
+
+<div class="progress"></div>
+
+<script src="shower/shower.js"></script>
+<!-- Copyright © 2023 Сэм Булатов Тинькофф -->
+</body>
+</html>
