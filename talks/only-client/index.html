@@ -5,7 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <link rel="stylesheet" href="shower/themes/mephi/styles/styles.css">
+    <link rel="icon" href="./pictures/local-first-web-logo.svg" type="image/svg+xml">
     <script src="tailwindcss.min.js"></script>
+<!--    <script src="https://unpkg.com/chart.js@4"></script>-->
+<!--    <script src="https://unpkg.com/chartjs-chart-wordcloud@4"></script>-->
     <script>
         tailwind.config = {
             important: true,
@@ -19,7 +22,7 @@
 
     <style>
         .slide:not(.clear) {
-            background-position: bottom 10px right 10px;
+            background-position: bottom 20px right 10px;
             background-image: url("./pictures/tinkoff.svg");
             background-repeat: no-repeat;
             background-size: 7%;
@@ -30,27 +33,25 @@
 <body class="shower list">
 
 <header class="caption">
-    <h1>Есть только клиент, или Что делать, если вы не хотите писать бэкенд</h1>
+    <h1>Есть только клиент, или Что делать, если вы не&nbsp;хотите писать бэкенд</h1>
     <p>Сэм Булатов, Тинькофф, <a href="https://krd.dev">krd.dev</a></p>
 </header>
 
 <section class="slide clear bg-[url('./pictures/fc23-title-2.png')] bg-contain">
-    <h2>Есть только клиент,<br> или Что делать, если вы не хотите писать бэкенд</h2>
+    <h2>Есть только клиент,<br> или Что делать, если вы не&nbsp;хотите писать бэкенд</h2>
     <p>Сэм Булатов, Тинькофф</p>
-    <!--    <h2 class="!text-[75px] !m-0 shout-section">Есть <span class="text-blue-500">только клиент</span>, или Что делать, если вы <span class="text-yellow-300">не хотите</span> писать бэкенд</h2>-->
 </section>
 
 <section class="slide">
-    <h2 class="shout-section">Еще один пет-проект</h2>
+    <h2 class="shout-section">Ещё один<br>пет-проект</h2>
 </section>
 
 <section class="slide">
-    <h2>Некоторые фичи, которые я хочу</h2>
+    <h2>Некоторые фичи,<br>которые я хочу</h2>
     <ul>
         <li class="next">Веб</li>
-        <li class="next">Возможность работы с нескольких устройств</li>
+        <li class="next">Возможность работы с&nbsp;нескольких устройств</li>
         <li class="next">Офлайн</li>
-        <li class="next">...</li>
     </ul>
 </section>
 
@@ -59,7 +60,8 @@
 </section>
 
 <section class="slide">
-    <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.5]" src="./pictures/html5_offline_storage.svg" alt="">
+    <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.5]"
+         src="./pictures/html5_offline_storage.svg" alt="">
 </section>
 
 <section class="slide p-0">
@@ -68,11 +70,11 @@
             <img class="block h-[var(--slide-height)] object-cover" src="./pictures/sam-bulatov.png" alt="">
         </section>
         <section class="py-8 px-16">
-            <h2>Сэм Булатов</h2>
+            <h2>Сэм Булатов👋</h2>
             <ul>
-                <li>Фронтенд разработчик в Тинькофф</li>
-                <li>Уже 5 месяцев экспериментирую с темой офлайна</li>
-                <li>За это время смог написать MVP приложение</li>
+                <li class="next">Фронтенд разработчик в&nbsp;Тинькофф</li>
+                <li class="next">Уже 5&nbsp;месяцев экспериментирую с&nbsp;темой офлайна</li>
+                <li class="next">За&nbsp;это время смог написать MVP приложение</li>
             </ul>
         </section>
     </div>
@@ -86,7 +88,7 @@
 </section>
 
 <section class="slide">
-    <h2 class="shout-section">Offline-first<span class="next">?</span></h2>
+    <h2 class="shout-section">Offline-first</h2>
 </section>
 
 <section class="slide">
@@ -101,15 +103,15 @@
 </section>
 
 <section class="slide">
-    <h2 class="shout-section">А где хранить данные?</h2>
+    <h2 class="shout-section">А&nbsp;где хранить данные?</h2>
 </section>
 
 <section class="slide">
-    <h2 class="shout-section">Очевидно. На фронтенде.</h2>
+    <h2 class="shout-section">Очевидно. На&nbsp;фронтенде.</h2>
 </section>
 
 <section class="slide">
-    <h2>Где можно хранить данные на фронтенде</h2>
+    <h2>Где можно хранить данные на&nbsp;фронтенде?</h2>
     <ul>
         <li class="next">Cookies</li>
         <li class="next">Web Storage</li>
@@ -124,11 +126,11 @@
 </section>
 
 <section class="slide">
-    <h2 class="shout-section">А если устройств много?</h2>
+    <h2 class="shout-section">А&nbsp;если<br>устройств много?</h2>
 </section>
 
 <section class="slide">
-    <h2 class="shout-section">А если пользователей много?</h2>
+    <h2 class="shout-section">А&nbsp;если пользователей много?</h2>
 </section>
 
 <section class="slide">
@@ -150,11 +152,11 @@
 
 <section class="slide">
     <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[3]"
-         src="./pictures/logux-logotype-light.svg" alt="">
+         src="./pictures/logux-logotype-light.svg">
 </section>
 
 <section class="slide">
-    <pre style="background-color: #fff">
+    <pre class="center-y">
         <code><span style="color: #CF222E">export</span><span
                 style="color: #24292F"> </span><span style="color: #CF222E">const</span><span
                 style="color: #24292F"> </span><span style="color: #8250DF">User</span><span
@@ -197,11 +199,11 @@
 </section>
 
 <section class="slide">
-    <h2 class="shout-section">Настоящий offline-first. <span class="next">Но нужен бекенд.</span></h2>
+    <h2 class="shout-section">Настоящий<br>offline-first. <span class="next">Но&nbsp;нужен бекенд.</span></h2>
 </section>
 
 <section class="slide">
-    <h2 class="shout-section">Зато я узнал про <span class="text-blue-500">CRDT</span>!</h2>
+    <h2 class="shout-section">Зато я&nbsp;узнал про&nbsp;<span class="text-blue-500">CRDT</span>!</h2>
 </section>
 
 <section class="slide">
@@ -214,11 +216,152 @@
 </section>
 
 <section class="slide">
-    <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.5]" src="https://mermaid.ink/svg/pako:eNpVj70OgzAMhF8l9QwvkKFSJYYO7VLGhsElTkHkp0qTIoR49ybAgiffp_PJN0PrJAEHpd3YdugDuz2EZWlqNKwsz-z1vJLW7tSsSm2Kjc5rubPhwBivmi3hoidncbXIQ8hvV9mawQAFGPIGe5lemfO1gNCRIQE8rZIURh0ECLskK8bg6sm2wIOPVED8SAxU9fj2aIAr1N9ESfbB-ftWb225_AE2U0tR" alt="">
+    <svg class="block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.9] w-full"
+         version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1374.5530051299284 480.0704758936704">
+        <defs>
+            <style class="style-fonts">
+                @font-face {
+                    font-family: "Virgil";
+                    src: url("https://excalidraw.com/Virgil.woff2");
+                }
+
+                @font-face {
+                    font-family: "Cascadia";
+                    src: url("https://excalidraw.com/Cascadia.woff2");
+                }
+            </style>
+
+        </defs>
+        <g stroke-linecap="round">
+            <g transform="translate(119.9868964646895 89.92861989586459) rotate(0 600.1108018391704 0)">
+                <path d="M0 0 C200.04 0, 1000.18 0, 1200.22 0 M0 0 C200.04 0, 1000.18 0, 1200.22 0" stroke="#1e1e1e"
+                      stroke-width="4" fill="none"></path>
+            </g>
+            <g transform="translate(119.9868964646895 89.92861989586459) rotate(0 600.1108018391704 0)">
+                <path d="M1172.03 10.26 C1181 7, 1189.97 3.73, 1200.22 0 M1172.03 10.26 C1182.29 6.53, 1192.55 2.79, 1200.22 0"
+                      stroke="#1e1e1e" stroke-width="4" fill="none"></path>
+            </g>
+            <g transform="translate(119.9868964646895 89.92861989586459) rotate(0 600.1108018391704 0)">
+                <path d="M1172.03 -10.26 C1181 -7, 1189.97 -3.73, 1200.22 0 M1172.03 -10.26 C1182.29 -6.53, 1192.55 -2.79, 1200.22 0"
+                      stroke="#1e1e1e" stroke-width="4" fill="none"></path>
+            </g>
+        </g>
+        <mask></mask>
+        <g transform="translate(18.96781528359861 67.36716235668473) rotate(0 37.0107421875 20.700000000000045)">
+            <text x="0" y="0" font-family="Helvetica, Segoe UI Emoji" font-size="36px" fill="#1e1e1e"
+                  text-anchor="start"
+                  style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">Sam
+            </text>
+        </g>
+        <g transform="translate(1274.5357360522048 22.29916666014128) rotate(0 34.0048828125 20.700000000000045)">
+            <text x="0" y="0" font-family="Helvetica, Segoe UI Emoji" font-size="36px" fill="#1e1e1e"
+                  text-anchor="start"
+                  style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">time
+            </text>
+        </g>
+        <g class="next">
+            <g transform="translate(160.22563276597873 10) rotate(0 84.375 21.600000000000023)">
+                <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+                      style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">"Hello!"
+                </text>
+            </g>
+            <g transform="translate(182.23313621870193 371.30331353698557) rotate(0 84.375 21.600000000000023)">
+                <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+                      style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">"Hello!"
+                </text>
+            </g>
+        </g>
+        <g class="next">
+            <g transform="translate(429.5240089609631 10.166968332607667) rotate(0 147.65625 21.600000000000023)">
+                <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+                      style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">"Hello World!"
+                </text>
+            </g>
+            <g transform="translate(451.5315124136863 371.47028186959324) rotate(0 116.015625 21.600000000000023)">
+                <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+                      style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">"Hello! :D"
+                </text>
+            </g>
+        </g>
+        <g class="next">
+            <g stroke-linecap="round">
+                <g transform="translate(707.2462068397596 447.1554112180188) rotate(0 65.61047560189616 -177.29882492822856)">
+                    <path d="M0 0 C21.87 -59.1, 109.35 -295.5, 131.22 -354.6 M0 0 C21.87 -59.1, 109.35 -295.5, 131.22 -354.6"
+                          stroke="#2f9e44" stroke-width="4" fill="none"></path>
+                </g>
+                <g transform="translate(707.2462068397596 447.1554112180188) rotate(0 65.61047560189616 -177.29882492822856)">
+                    <path d="M131.06 -324.6 C131.11 -334.12, 131.16 -343.65, 131.22 -354.6 M131.06 -324.6 C131.1 -332.97, 131.15 -341.34, 131.22 -354.6"
+                          stroke="#2f9e44" stroke-width="4" fill="none"></path>
+                </g>
+                <g transform="translate(707.2462068397596 447.1554112180188) rotate(0 65.61047560189616 -177.29882492822856)">
+                    <path d="M111.81 -331.72 C117.98 -338.98, 124.14 -346.25, 131.22 -354.6 M111.81 -331.72 C117.23 -338.1, 122.64 -344.49, 131.22 -354.6"
+                          stroke="#2f9e44" stroke-width="4" fill="none"></path>
+                </g>
+            </g>
+            <g stroke-linecap="round">
+                <g transform="translate(766.7623383014803 88.66362895913426) rotate(0 22.32797492982479 180.0591884914984)">
+                    <path d="M0 0 C7.44 60.02, 37.21 300.1, 44.66 360.12 M0 0 C7.44 60.02, 37.21 300.1, 44.66 360.12"
+                          stroke="#2f9e44" stroke-width="4" fill="none"></path>
+                </g>
+                <g transform="translate(766.7623383014803 88.66362895913426) rotate(0 22.32797492982479 180.0591884914984)">
+                    <path d="M31 333.4 C35 341.21, 38.99 349.02, 44.66 360.12 M31 333.4 C34.3 339.85, 37.59 346.29, 44.66 360.12"
+                          stroke="#2f9e44" stroke-width="4" fill="none"></path>
+                </g>
+                <g transform="translate(766.7623383014803 88.66362895913426) rotate(0 22.32797492982479 180.0591884914984)">
+                    <path d="M51.37 330.88 C49.41 339.43, 47.44 347.98, 44.66 360.12 M51.37 330.88 C49.75 337.93, 48.13 344.99, 44.66 360.12"
+                          stroke="#2f9e44" stroke-width="4" fill="none"></path>
+                </g>
+            </g>
+            <g transform="translate(829.1546339442473 234.85786934515113) rotate(0 42.1875 21.600000000000023)">
+                <text x="0" y="0" font-family="monospace" font-size="36px" fill="#2f9e44" text-anchor="start"
+                      style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">Sync
+                </text>
+            </g>
+        </g>
+        <g class="next">
+            <g transform="translate(819.1365339877955 10.086177203926354) rotate(0 179.296875 21.600000000000023)">
+                <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+                      style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">"Hello World! :D"
+                </text>
+            </g>
+            <g transform="translate(841.1440374405187 371.3894907409119) rotate(0 179.296875 21.600000000000023)">
+                <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+                      style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">"Hello World! :D"
+                </text>
+            </g>
+        </g>
+        <g stroke-linecap="round">
+            <g transform="translate(141.9943999174127 451.23193343285016) rotate(0 600.1108018391703 0)">
+                <path d="M0 0 C200.04 0, 1000.18 0, 1200.22 0 M0 0 C200.04 0, 1000.18 0, 1200.22 0" stroke="#1e1e1e"
+                      stroke-width="4" fill="none"></path>
+            </g>
+            <g transform="translate(141.9943999174127 451.23193343285016) rotate(0 600.1108018391703 0)">
+                <path d="M1172.03 10.26 C1182.78 6.35, 1193.54 2.43, 1200.22 0 M1172.03 10.26 C1178.51 7.9, 1184.98 5.55, 1200.22 0"
+                      stroke="#1e1e1e" stroke-width="4" fill="none"></path>
+            </g>
+            <g transform="translate(141.9943999174127 451.23193343285016) rotate(0 600.1108018391703 0)">
+                <path d="M1172.03 -10.26 C1182.78 -6.35, 1193.54 -2.43, 1200.22 0 M1172.03 -10.26 C1178.51 -7.9, 1184.98 -5.55, 1200.22 0"
+                      stroke="#1e1e1e" stroke-width="4" fill="none"></path>
+            </g>
+        </g>
+        <mask></mask>
+        <g transform="translate(10 428.6704758936703) rotate(0 55.037109375 20.700000000000045)">
+            <text x="0" y="0" font-family="Helvetica, Segoe UI Emoji" font-size="36px" fill="#1e1e1e"
+                  text-anchor="start"
+                  style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">Alyona
+            </text>
+        </g>
+        <g transform="translate(1296.5432395049284 383.60248019712685) rotate(0 34.0048828125 20.700000000000045)">
+            <text x="0" y="0" font-family="Helvetica, Segoe UI Emoji" font-size="36px" fill="#1e1e1e"
+                  text-anchor="start"
+                  style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">time
+            </text>
+        </g>
+    </svg>
 </section>
 
 <section class="slide">
-    <h2></h2>
+    <h2>Принципы</h2>
     <ol>
         <li class="next">Приложение может обновить любую реплику независимо</li>
         <li class="next">Все конфликты разрешаются автоматически</li>
@@ -230,11 +373,147 @@
 </section>
 
 <section class="slide">
-    <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.5]" src="https://mermaid.ink/svg/pako:eNpVjzELwjAQhf9KuLUtqNAlg4uOuuiYdDiSS1vaJhITREr_uzHBwRuO7x7vHncrKKcJOJjZvdSAPrDLTVqW6uSiDeT3rGmOTIldl8GIqi00iLYrztJNVqcy9MUi7V_WIav4y-pFtS80pSyoYSG_4KjTOet3T0IYaCEJPKEmg3EOEqTdkhVjcPe3VcCDj1RDfGgMdB6x97gANzg_k0p6DM5fy4v50-0DgEtH_A" alt="">
+    <h2 class="shout-section">Grow-only Counter</h2>
 </section>
 
 <section class="slide">
-    <pre style="background-color: #fff" class="center-y"><code><span style="color: #CF222E">interface</span><span
+    <svg
+            class="block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.9] w-full"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1092.5488774310343 482.0525515839795"
+            width="2185.0977548620685" height="964.105103167959">
+        <g stroke-linecap="round">
+            <g transform="translate(178.8890153484342 91.91069558617346) rotate(0 407.057706818133 0)">
+                <path d="M0 0 C135.69 0, 678.43 0, 814.12 0 M0 0 C135.69 0, 678.43 0, 814.12 0" stroke="#1e1e1e"
+                      stroke-width="4" fill="none"></path>
+            </g>
+            <g transform="translate(178.8890153484342 91.91069558617346) rotate(0 407.057706818133 0)">
+                <path d="M785.92 10.26 C794.9 7, 803.87 3.73, 814.12 0 M785.92 10.26 C796.18 6.53, 806.44 2.79, 814.12 0"
+                      stroke="#1e1e1e" stroke-width="4" fill="none"></path>
+            </g>
+            <g transform="translate(178.8890153484342 91.91069558617346) rotate(0 407.057706818133 0)">
+                <path d="M785.92 -10.26 C794.9 -7, 803.87 -3.73, 814.12 0 M785.92 -10.26 C796.18 -6.53, 806.44 -2.79, 814.12 0"
+                      stroke="#1e1e1e" stroke-width="4" fill="none"></path>
+            </g>
+        </g>
+        <mask></mask>
+        <g transform="translate(10 68.16430149300459) rotate(0 74.0478515625 20.700000000000045)">
+            <text x="0" y="0" font-family="Helvetica, Segoe UI Emoji" font-size="36px" fill="#1e1e1e"
+                  text-anchor="start"
+                  style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">Counter1
+            </text>
+        </g>
+        <g transform="translate(986.2029699399606 31.757114791071672) rotate(0 34.0048828125 20.700000000000045)">
+            <text x="0" y="0" font-family="Helvetica, Segoe UI Emoji" font-size="36px" fill="#1e1e1e"
+                  text-anchor="start"
+                  style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">time
+            </text>
+        </g>
+        <g class="next">
+            <g transform="translate(219.12775164972345 11.982075690308875) rotate(0 10.546875 21.600000000000023)">
+                <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+                      style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">0
+                </text>
+            </g>
+            <g transform="translate(241.13525510244665 373.2853892272942) rotate(0 10.546875 21.59999999999991)">
+                <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+                      style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">0
+                </text>
+            </g>
+        </g>
+        <g class="next">
+            <g transform="translate(488.4261278447078 10) rotate(0 21.09375 21.600000000000023)">
+                <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+                      style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">+5
+                </text>
+            </g>
+            <g transform="translate(510.433631297431 373.45235755990234) rotate(0 21.09375 21.59999999999991)">
+                <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+                      style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">+1
+                </text>
+            </g>
+        </g>
+        <g class="next">
+            <g stroke-linecap="round">
+                <g transform="translate(613.9486114388612 447.36546815258953) rotate(0 65.61047560189616 -177.29882492822856)">
+                    <path d="M0 0 C21.87 -59.1, 109.35 -295.5, 131.22 -354.6 M0 0 C21.87 -59.1, 109.35 -295.5, 131.22 -354.6"
+                          stroke="#2f9e44" stroke-width="4" fill="none"></path>
+                </g>
+                <g transform="translate(613.9486114388612 447.36546815258953) rotate(0 65.61047560189616 -177.29882492822856)">
+                    <path d="M131.06 -324.6 C131.11 -334.12, 131.16 -343.65, 131.22 -354.6 M131.06 -324.6 C131.1 -332.97, 131.15 -341.34, 131.22 -354.6"
+                          stroke="#2f9e44" stroke-width="4" fill="none"></path>
+                </g>
+                <g transform="translate(613.9486114388612 447.36546815258953) rotate(0 65.61047560189616 -177.29882492822856)">
+                    <path d="M111.81 -331.72 C117.98 -338.98, 124.14 -346.25, 131.22 -354.6 M111.81 -331.72 C117.23 -338.1, 122.64 -344.49, 131.22 -354.6"
+                          stroke="#2f9e44" stroke-width="4" fill="none"></path>
+                </g>
+            </g>
+            <g stroke-linecap="round">
+                <g transform="translate(626.6597490180161 92.62239426450674) rotate(0 58.89942584612197 181.70194144134655)">
+                    <path d="M0 0 C19.63 60.57, 98.17 302.84, 117.8 363.4 M0 0 C19.63 60.57, 98.17 302.84, 117.8 363.4"
+                          stroke="#2f9e44" stroke-width="4" fill="none"></path>
+                </g>
+                <g transform="translate(626.6597490180161 92.62239426450674) rotate(0 58.89942584612197 181.70194144134655)">
+                    <path d="M99.35 339.75 C104.74 346.67, 110.14 353.58, 117.8 363.4 M99.35 339.75 C103.8 345.46, 108.25 351.16, 117.8 363.4"
+                          stroke="#2f9e44" stroke-width="4" fill="none"></path>
+                </g>
+                <g transform="translate(626.6597490180161 92.62239426450674) rotate(0 58.89942584612197 181.70194144134655)">
+                    <path d="M118.87 333.42 C118.55 342.19, 118.24 350.95, 117.8 363.4 M118.87 333.42 C118.61 340.66, 118.35 347.89, 117.8 363.4"
+                          stroke="#2f9e44" stroke-width="4" fill="none"></path>
+                </g>
+            </g>
+            <g transform="translate(740.9253353492746 246.5833551543965) rotate(0 42.1875 21.59999999999991)">
+                <text x="0" y="0" font-family="monospace" font-size="36px" fill="#2f9e44" text-anchor="start"
+                      style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">Sync
+                </text>
+            </g>
+        </g>
+        <g class="next">
+            <g transform="translate(856.2412063533878 13.09160719086185) rotate(0 10.546875 21.600000000000023)">
+                <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+                      style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">5
+                </text>
+            </g>
+            <g transform="translate(858.7349591920101 377.1256608772678) rotate(0 10.546875 21.59999999999991)">
+                <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+                      style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">5
+                </text>
+            </g>
+        </g>
+        <g stroke-linecap="round">
+            <g transform="translate(200.8965188011574 453.21400912315903) rotate(0 404.6986058606458 0)">
+                <path d="M0 0 C134.9 0, 674.5 0, 809.4 0 M0 0 C134.9 0, 674.5 0, 809.4 0" stroke="#1e1e1e"
+                      stroke-width="4"
+                      fill="none"></path>
+            </g>
+            <g transform="translate(200.8965188011574 453.21400912315903) rotate(0 404.6986058606458 0)">
+                <path d="M781.21 10.26 C791.96 6.35, 802.71 2.43, 809.4 0 M781.21 10.26 C787.68 7.9, 794.16 5.55, 809.4 0"
+                      stroke="#1e1e1e" stroke-width="4" fill="none"></path>
+            </g>
+            <g transform="translate(200.8965188011574 453.21400912315903) rotate(0 404.6986058606458 0)">
+                <path d="M781.21 -10.26 C791.96 -6.35, 802.71 -2.43, 809.4 0 M781.21 -10.26 C787.68 -7.9, 794.16 -5.55, 809.4 0"
+                      stroke="#1e1e1e" stroke-width="4" fill="none"></path>
+            </g>
+        </g>
+        <mask></mask>
+        <g transform="translate(34.371990485455854 430.6525515839794) rotate(0 74.0478515625 20.700000000000045)">
+            <text x="0" y="0" font-family="Helvetica, Segoe UI Emoji" font-size="36px" fill="#1e1e1e"
+                  text-anchor="start"
+                  style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">Counter2
+            </text>
+        </g>
+        <g transform="translate(1014.5391118060344 394.74626987986903) rotate(0 34.0048828125 20.700000000000045)">
+            <text x="0" y="0" font-family="Helvetica, Segoe UI Emoji" font-size="36px" fill="#1e1e1e"
+                  text-anchor="start"
+                  style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">time
+            </text>
+        </g>
+    </svg>
+</section>
+
+<section class="slide">
+    <pre class="center-y"><code><span style="color: #CF222E">interface</span><span
             style="color: #24292F"> </span><span style="color: #953800">GCounter</span><span
             style="color: #24292F"> {</span></code>
     <code class="next"><span style="color: #24292F">  </span><span style="color: #8250DF">getValue</span><span
@@ -254,68 +533,52 @@
 </section>
 
 <section class="slide">
-    <pre style="background-color: #fff">
+    <pre class="center-y">
         <code><span style="color: #CF222E">class</span><span
                 style="color: #24292F"> </span><span style="color: #953800">GCounterImpl</span><span
                 style="color: #24292F"> </span><span style="color: #CF222E">implements</span><span
                 style="color: #24292F"> </span><span style="color: #0550AE">GCounter</span><span
                 style="color: #24292F"> {</span></code>
-<code><span style="color: #24292F">  </span><span style="color: #CF222E">private</span><span
-        style="color: #24292F"> </span><span style="color: #953800">value</span><span
-        style="color: #CF222E">:</span><span style="color: #24292F"> </span><span
-        style="color: #0550AE">number</span></code>
-<code><span style="color: #24292F">  </span><span style="color: #CF222E">constructor</span><span style="color: #24292F">(</span><span
-        style="color: #953800">initialValue</span><span style="color: #CF222E">:</span><span
-        style="color: #24292F"> </span><span style="color: #0550AE">number</span><span
-        style="color: #24292F"> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> </span><span
-        style="color: #0550AE">0</span><span style="color: #24292F">) {</span></code>
-<code><span style="color: #24292F">    </span><span style="color: #0550AE">this</span><span style="color: #24292F">.value </span><span
-        style="color: #CF222E">=</span><span style="color: #24292F"> initialValue</span></code>
-<code><span style="color: #24292F">  }</span></code>
-<code><span style="color: #24292F">  </span><span style="color: #CF222E">public</span><span
-        style="color: #24292F"> </span><span style="color: #8250DF">getValue</span><span
-        style="color: #24292F">()</span><span style="color: #CF222E">:</span><span style="color: #24292F"> </span><span
-        style="color: #0550AE">number</span><span style="color: #24292F"> {</span></code>
-<code><span style="color: #24292F">    </span><span style="color: #CF222E">return</span><span
-        style="color: #24292F"> </span><span style="color: #0550AE">this</span><span
-        style="color: #24292F">.value</span></code>
-<code><span style="color: #24292F">  }</span></code>
-<code><span style="color: #24292F">}</span></code></pre>
+        <code><span style="color: #24292F">  </span><span style="color: #CF222E">private</span><span
+                style="color: #24292F"> </span><span style="color: #953800">value</span><span
+                style="color: #CF222E">:</span><span style="color: #24292F"> </span><span
+                style="color: #0550AE">number</span></code>
+        <code><span style="color: #24292F">  </span><span style="color: #CF222E">constructor</span><span style="color: #24292F">(</span><span
+                style="color: #953800">initialValue</span><span style="color: #CF222E">:</span><span
+                style="color: #24292F"> </span><span style="color: #0550AE">number</span><span
+                style="color: #24292F"> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> </span><span
+                style="color: #0550AE">0</span><span style="color: #24292F">) {</span></code>
+        <code><span style="color: #24292F">    </span><span style="color: #0550AE">this</span><span style="color: #24292F">.value </span><span
+                style="color: #CF222E">=</span><span style="color: #24292F"> initialValue</span></code>
+        <code><span style="color: #24292F">  }</span></code>
+        <code><span style="color: #24292F">  </span><span style="color: #CF222E">public</span><span
+                style="color: #24292F"> </span><span style="color: #8250DF">getValue</span><span
+                style="color: #24292F">()</span><span style="color: #CF222E">:</span><span style="color: #24292F"> </span><span
+                style="color: #0550AE">number</span><span style="color: #24292F"> {</span></code>
+        <code><span style="color: #24292F">    </span><span style="color: #CF222E">return</span><span
+                style="color: #24292F"> </span><span style="color: #0550AE">this</span><span
+                style="color: #24292F">.value</span></code>
+        <code><span style="color: #24292F">  }</span></code>
+        <code><span style="color: #24292F">}</span></code></pre>
 </section>
 
 <section class="slide">
-<pre style="background-color: #fff"><code><span style="color: #CF222E">class</span><span style="color: #24292F"> </span><span
-        style="color: #953800">GCounterImpl</span><span style="color: #24292F"> </span><span style="color: #CF222E">implements</span><span
-        style="color: #24292F"> </span><span style="color: #0550AE">GCounter</span><span
-        style="color: #24292F"> {</span></code>
-<code><span style="color: #24292F">  </span><span style="color: #6E7781">// ...</span></code>
-<code><span style="color: #24292F">  </span><span style="color: #CF222E">public</span><span
-        style="color: #24292F"> </span><span style="color: #8250DF">increment</span><span
-        style="color: #24292F">(</span><span style="color: #953800">num</span><span style="color: #CF222E">:</span><span
-        style="color: #24292F"> </span><span style="color: #0550AE">number</span><span
-        style="color: #24292F">)</span><span style="color: #CF222E">:</span><span style="color: #24292F"> </span><span
-        style="color: #0550AE">void</span><span style="color: #24292F"> {</span></code>
-<code><span style="color: #24292F">    </span><span style="color: #0550AE">this</span><span style="color: #24292F">.value </span><span
-        style="color: #CF222E">=</span><span style="color: #24292F"> </span><span
-        style="color: #0550AE">this</span><span style="color: #24292F">.value </span><span
-        style="color: #CF222E">+</span><span style="color: #24292F"> num;</span></code>
-<code><span style="color: #24292F">  }</span></code>
-<code><span style="color: #24292F">  </span><span style="color: #CF222E">public</span><span
-        style="color: #24292F"> </span><span style="color: #8250DF">merge</span><span
-        style="color: #24292F">(</span><span style="color: #953800">otherCounter</span><span
-        style="color: #CF222E">:</span><span style="color: #24292F"> </span><span style="color: #953800">GCounter</span><span
-        style="color: #24292F">)</span><span style="color: #CF222E">:</span><span style="color: #24292F"> </span><span
-        style="color: #0550AE">void</span><span style="color: #24292F"> {</span></code>
-<code><span style="color: #24292F">    </span><span style="color: #0550AE">this</span><span style="color: #24292F">.value </span><span
-        style="color: #CF222E">=</span><span style="color: #24292F"> Math.</span><span style="color: #8250DF">max</span><span
-        style="color: #24292F">(</span><span style="color: #0550AE">this</span><span style="color: #24292F">.value, otherCounter.</span><span
-        style="color: #8250DF">getValue</span><span style="color: #24292F">())</span></code>
-<code><span style="color: #24292F">  }</span></code>
-<code><span style="color: #24292F">}</span></code></pre>
+    <pre>
+        <code><span style="color: #CF222E">class</span><span style="color: #24292F"> </span><span style="color: #953800">GCounterImpl</span><span style="color: #24292F"> </span><span style="color: #CF222E">implements</span><span style="color: #24292F"> </span><span style="color: #0550AE">GCounter</span><span style="color: #24292F"> {</span></code>
+        <code><span style="color: #24292F">  </span><span style="color: #6E7781">// ...</span></code>
+        <code><span style="color: #24292F">  </span><span style="color: #CF222E">public</span><span style="color: #24292F"> </span><span style="color: #8250DF">increment</span><span style="color: #24292F">(</span><span style="color: #953800">num</span><span style="color: #CF222E">:</span><span style="color: #24292F"> </span><span style="color: #0550AE">number</span><span style="color: #24292F">)</span><span style="color: #CF222E">:</span><span style="color: #24292F"> </span><span style="color: #0550AE">void</span><span style="color: #24292F"> {</span></code>
+        <code><span style="color: #24292F">    </span><span style="color: #0550AE">this</span><span style="color: #24292F">.value </span><span style="color: #CF222E">=</span><span style="color: #24292F"> </span><span style="color: #0550AE">this</span><span style="color: #24292F">.value </span><span style="color: #CF222E">+</span><span style="color: #24292F"> num</span></code>
+        <code><span style="color: #24292F">  }</span></code>
+        <code class="next mark"><span style="color: #24292F">  </span><span style="color: #CF222E">public</span><span style="color: #24292F"> </span><span style="color: #8250DF">merge</span><span style="color: #24292F">(</span><span style="color: #953800">otherCounter</span><span style="color: #CF222E">:</span><span style="color: #24292F"> </span><span style="color: #953800">GCounter</span><span style="color: #24292F">)</span><span style="color: #CF222E">:</span><span style="color: #24292F"> </span><span style="color: #0550AE">void</span><span style="color: #24292F"> {</span></code>
+        <code><span style="color: #24292F">    </span><span style="color: #CF222E">const</span><span style="color: #24292F"> </span><span style="color: #0550AE">otherCounterValue</span><span style="color: #24292F"> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> otherCounter.</span><span style="color: #8250DF">getValue</span><span style="color: #24292F">()</span></code>
+        <code><span style="color: #24292F">    </span><span style="color: #0550AE">this</span><span style="color: #24292F">.value </span><span style="color: #CF222E">=</span><span style="color: #24292F"> Math.</span><span style="color: #8250DF">max</span><span style="color: #24292F">(</span><span style="color: #0550AE">this</span><span style="color: #24292F">.value, otherCounterValue)</span></code>
+        <code><span style="color: #24292F">  }</span></code>
+        <code><span style="color: #24292F">}</span></code>
+    </pre>
 </section>
 
 <section class="slide">
-    <pre style="background-color: #fff"><code><span style="color: #CF222E">const</span><span
+    <pre class="center-y"><code><span style="color: #CF222E">const</span><span
             style="color: #24292F"> </span><span style="color: #0550AE">counter1</span><span
             style="color: #24292F"> </span><span style="color: #CF222E">=</span><span
             style="color: #24292F"> </span><span style="color: #CF222E">new</span><span
@@ -346,6 +609,10 @@
     </div>
 </section>
 
+<section class="slide clear black">
+    <img class="cover" src="./pictures/localfirstweb.png" alt="">
+</section>
+
 <section class="slide">
     <h2>Проблемы</h2>
     <ol>
@@ -356,7 +623,11 @@
 </section>
 
 <section class="slide">
-    <h2 class="shout-section">Без бекенда</h2>
+    <h2 class="shout-section">
+        <del>Без бекенда</del>
+        <br>
+        Local-first
+    </h2>
 </section>
 
 <section class="slide">
@@ -365,80 +636,323 @@
         <li>PouchDB</li>
         <li>Automerge</li>
         <li>VLCN</li>
-        <li>TinyBase</li>
     </ul>
+</section>
+
+<section class="slide">
+    <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.5]" src="./pictures/pouchdb.svg"
+         alt="">
+</section>
+
+<section class="slide">
+    <pre class="center-y">
+        <code><span style="color: #CF222E">const</span><span style="color: #24292F"> </span><span
+                style="color: #0550AE">db</span><span style="color: #24292F"> </span><span
+                style="color: #CF222E">=</span><span style="color: #24292F"> </span><span
+                style="color: #CF222E">new</span><span style="color: #24292F"> </span><span style="color: #8250DF">PouchDB</span><span
+                style="color: #24292F">(</span><span style="color: #0A3069">&#39;dbname&#39;</span><span
+                style="color: #24292F">);</span></code>
+        <code><span style="color: #24292F">db.</span><span style="color: #8250DF">put</span><span
+                style="color: #24292F">({</span></code>
+        <code><span style="color: #24292F">  _id: </span><span
+                style="color: #0A3069">&#39;dave@gmail.com&#39;</span><span style="color: #24292F">,</span></code>
+        <code><span style="color: #24292F">  name: </span><span style="color: #0A3069">&#39;David&#39;</span><span
+                style="color: #24292F">,</span></code>
+        <code><span style="color: #24292F">  age: </span><span style="color: #0550AE">69</span></code>
+        <code><span style="color: #24292F">})</span></code>
+        </pre>
+</section>
+
+<section class="slide">
+    <pre class="center-y">
+    <code><span style="color: #24292F">db.</span><span style="color: #8250DF">changes</span><span
+            style="color: #24292F">().</span><span style="color: #8250DF">on</span><span style="color: #24292F">(</span><span
+            style="color: #0A3069">&#39;change&#39;</span><span style="color: #24292F">, </span><span
+            style="color: #24292F">() => {</span></code>
+        <code><span style="color: #24292F">  console.</span><span style="color: #8250DF">log</span><span
+                style="color: #24292F">(</span><span style="color: #0A3069">&#39;Ch-Ch-Changes&#39;</span><span
+                style="color: #24292F">)</span></code>
+        <code><span style="color: #24292F">})</span></code>
+        <code><span style="color: #24292F">db.replicate.</span><span style="color: #8250DF">to</span><span
+                style="color: #24292F">(</span><span
+                style="color: #0A3069">&#39;http://example.com/mydb&#39;</span><span
+                style="color: #24292F">)</span></code>
+    </pre>
 </section>
 
 <section class="slide">
     <h2>PouchDB</h2>
     <div class="columns two">
         <div>
-            <p>Плюсы</p>
+            <p><span class="font-bold">Плюсы👍</span></p>
             <ul>
-                <li>Hello</li>
+                <li class="next">Умеет хранить данные на&nbsp;клиенте</li>
+                <li class="next">Умеет синхронизировать&nbsp;их</li>
             </ul>
         </div>
         <div>
-            <p>Минусы</p>
+            <p><span class="font-bold">Минусы👎</span></p>
             <ul>
-                <li>Hello</li>
+                <li class="next">Умеет синхронизироваться только с&nbsp;сервером</li>
+                <li class="next">А на&nbsp;сервере должен стоять либо Apache CouchDB, либо PouchDB</li>
             </ul>
         </div>
     </div>
+</section>
+
+<section class="slide">
+    <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.2]"
+         src="./pictures/automerge-logo.svg" alt="">
+</section>
+
+<section class="slide">
+    <pre style="background-color: #fff">
+        <code><span style="color: #CF222E">import</span><span style="color: #24292F"> </span><span
+                style="color: #0550AE">*</span><span style="color: #24292F"> </span><span
+                style="color: #CF222E">as</span><span style="color: #24292F"> Automerge </span><span
+                style="color: #CF222E">from</span><span style="color: #24292F"> </span><span style="color: #0A3069">&quot;@automerge/automerge&quot;</span></code>
+        <code><span style="color: #CF222E">let</span><span style="color: #24292F"> document1 </span><span
+                style="color: #CF222E">=</span><span style="color: #24292F"> Automerge.</span><span
+                style="color: #8250DF">from</span><span style="color: #24292F">({</span></code>
+        <code><span style="color: #24292F">  conferences: [</span><span
+                style="color: #0A3069">&quot;FrontendConf&quot;</span><span style="color: #24292F">, </span><span
+                style="color: #0A3069">&quot;KRD Dev Conf&quot;</span><span style="color: #24292F">],</span></code>
+        <code><span style="color: #24292F">  year: </span><span style="color: #0550AE">2023</span></code>
+        <code><span style="color: #24292F">})</span></code>
+        <code><span style="color: #24292F">document1 </span><span style="color: #CF222E">=</span><span
+                style="color: #24292F"> Automerge.</span><span style="color: #8250DF">change</span><span
+                style="color: #24292F">(document1, (</span><span style="color: #953800">doc</span><span
+                style="color: #24292F">) </span><span style="color: #CF222E">=&gt;</span><span
+                style="color: #24292F"> {</span></code>
+        <code><span style="color: #24292F">  doc.conferences.</span><span style="color: #8250DF">push</span><span
+                style="color: #24292F">(</span><span style="color: #0A3069">&quot;HolyJS&quot;</span><span
+                style="color: #24292F">)</span></code>
+        <code><span style="color: #24292F">  doc.year </span><span style="color: #CF222E">+=</span><span
+                style="color: #24292F"> </span><span style="color: #0550AE">1</span><span
+                style="color: #24292F"></span></code>
+        <code><span style="color: #24292F">})</span></code>
+    </pre>
+</section>
+
+<section class="slide">
+    <pre>
+        <code><span style="color: #CF222E">import</span><span style="color: #24292F"> </span><span
+                style="color: #0550AE">*</span><span style="color: #24292F"> </span><span
+                style="color: #CF222E">as</span><span style="color: #24292F"> Automerge <span style="color: #CF222E">from</span> </span><span
+                style="color: #0A3069">&quot;@automerge/automerge&quot;</span></code>
+        <code><br/></code>
+        <code><span style="color: #24292F">let document2 = Automerge.</span><span
+                style="color: #CF222E">from</span><span style="color: #24292F">({</span></code>
+        <code><span style="color: #24292F">  conferences: [&quot;Web Standards Days&quot;]</span></code>
+        <code><span style="color: #24292F">})</span></code>
+        <code><br/></code>
+        <code><span style="color: #24292F">document1 </span><span style="color: #CF222E">=</span><span
+                style="color: #24292F"> Automerge.</span><span style="color: #8250DF">merge</span><span
+                style="color: #24292F">(document1, document2);</span></code>
+        <code><span style="color: #24292F">document2 </span><span style="color: #CF222E">=</span><span
+                style="color: #24292F"> Automerge.</span><span style="color: #8250DF">merge</span><span
+                style="color: #24292F">(document2, document1)</span></code>
+    </pre>
+</section>
+
+<section class="slide">
+    <pre>
+        <code><span style="color: #CF222E">import</span><span style="color: #24292F"> </span><span
+                style="color: #0550AE">*</span><span style="color: #24292F"> </span><span
+                style="color: #CF222E">as</span><span style="color: #24292F"> Automerge </span><span
+                style="color: #CF222E">from</span><span style="color: #24292F"> </span><span style="color: #0A3069">&quot;@automerge/automerge&quot;</span></code>
+        <code><br/></code>
+        <code><span style="color: #CF222E">const</span><span style="color: #24292F"> </span><span
+                style="color: #0550AE">docId</span><span style="color: #24292F"> </span><span
+                style="color: #CF222E">=</span><span style="color: #24292F"> location.hash.</span><span
+                style="color: #8250DF">replace</span><span style="color: #24292F">(</span><span style="color: #0A3069">&quot;#&quot;</span><span
+                style="color: #24292F">, </span><span style="color: #0A3069">&quot;&quot;</span><span
+                style="color: #24292F">)</span></code>
+        <code><span style="color: #CF222E">const</span><span style="color: #24292F"> </span><span
+                style="color: #0550AE">maybeDoc</span><span style="color: #24292F"> </span><span style="color: #CF222E">=</span><span
+                style="color: #24292F"> localStorage.</span><span style="color: #8250DF">getItem</span><span
+                style="color: #24292F">(docId)</span></code>
+        <code><span style="color: #CF222E">let</span><span style="color: #24292F"> document </span></span><span
+                style="color: #CF222E">=</span><span style="color: #24292F"> Automerge.</span><span
+                style="color: #8250DF">init</span><span style="color: #24292F">()</span></code>
+        <code><br/></code>
+        <code><span style="color: #CF222E">if</span><span style="color: #24292F"> (maybeDoc </span><span
+                style="color: #CF222E">!==</span><span style="color: #24292F"> </span><span
+                style="color: #0550AE">null</span><span style="color: #24292F">) {</span></code>
+        <code><span style="color: #24292F">  document </span><span style="color: #CF222E">=</span><span
+                style="color: #24292F"> Automerge.</span><span style="color: #8250DF">load</span><span
+                style="color: #24292F">(maybeDoc)</span></code>
+        <code><span style="color: #24292F">}</span></code>
+    </pre>
+</section>
+
+<section class="slide">
+    <pre>
+        <code><span style="color: #CF222E">import</span><span style="color: #24292F"> </span><span
+                style="color: #0550AE">*</span><span style="color: #24292F"> </span><span
+                style="color: #CF222E">as</span><span style="color: #24292F"> Automerge </span><span
+                style="color: #CF222E">from</span><span style="color: #24292F"> </span><span style="color: #0A3069">&#39;@automerge/automerge&#39;</span><span
+                style="color: #24292F"></span></code>
+        <code><br/></code>
+        <code><span style="color: #CF222E">const</span><span style="color: #24292F"> </span><span
+                style="color: #0550AE">docId</span><span style="color: #24292F"> </span><span
+                style="color: #CF222E">=</span><span style="color: #24292F"> location.hash.</span><span
+                style="color: #8250DF">replace</span><span style="color: #24292F">(</span><span style="color: #0A3069">&#39;#&#39;</span><span
+                style="color: #24292F">, </span><span style="color: #0A3069">&#39;&#39;</span><span
+                style="color: #24292F">)</span></code>
+        <code><span style="color: #CF222E">let</span><span style="color: #24292F"> document </span><span
+                style="color: #CF222E">=</span><span style="color: #24292F"> Automerge.</span><span
+                style="color: #8250DF">init</span><span style="color: #24292F">()</span></code>
+        <code><span style="color: #CF222E">const</span><span style="color: #24292F"> </span><span
+                style="color: #0550AE">result</span><span style="color: #24292F"> </span><span
+                style="color: #CF222E">=</span><span style="color: #24292F"> Automerge.</span><span
+                style="color: #8250DF">save</span><span style="color: #24292F">(document)</span></code>
+        <code><br/></code>
+        <code><span style="color: #24292F">localStorage.</span><span style="color: #8250DF">setItem</span><span
+                style="color: #24292F">(docId, result)</span></code>
+    </pre>
 </section>
 
 <section class="slide">
     <h2>Automerge</h2>
     <div class="columns two">
         <div>
-            <p>Плюсы</p>
+            <p><span class="font-bold">Плюсы👍</span></p>
             <ul>
-                <li>Hello</li>
+                <li class="next">Умеет хранить локально</li>
+                <li class="next">Framework, Network, Storage&nbsp;&mdash; агностик</li>
+                <li class="next">Есть автоматическое разрешение конфликтов</li>
             </ul>
         </div>
         <div>
-            <p>Минусы</p>
+            <p><span class="font-bold">Минусы👎</span></p>
             <ul>
-                <li>Hello</li>
+                <li class="next">Предоставляет только разрешение конфликтов</li>
             </ul>
         </div>
     </div>
 </section>
 
+<section class="slide clear black">
+    <img class="cover" src="./pictures/sqlite-wasm.png" alt="">
+    <div class="spotlight next" style="
+        --spotlight-radius: 0;
+        --spotlight-opacity: 0.5;
+        --spotlight-width: 1024px;
+        --spotlight-height: 88px;
+        --spotlight-top: 77px;"></div>
+</section>
+
 <section class="slide">
-    <h2>TinyBase</h2>
-    <div class="columns two">
-        <div>
-            <p>Плюсы</p>
-            <ul>
-                <li>Hello</li>
-            </ul>
-        </div>
-        <div>
-            <p>Минусы</p>
-            <ul>
-                <li>Hello</li>
-            </ul>
-        </div>
-    </div>
+    <h2 class="shout-section">VLCN</h2>
+</section>
+
+<section class="slide">
+    <pre class="center-y">
+        <code><span style="color: #CF222E">import</span><span style="color: #24292F"> initWasm </span><span
+                style="color: #CF222E">from</span><span style="color: #24292F"> </span><span style="color: #0A3069">&#39;@vlcn.io/crsqlite-wasm&#39;</span><span
+                style="color: #24292F"></span></code>
+        <code><br/></code>
+        <code><span style="color: #CF222E">const</span><span style="color: #24292F"> </span><span
+                style="color: #0550AE">sqlite</span><span
+                style="color: #24292F"> </span><span style="color: #CF222E">=</span><span
+                style="color: #24292F"> </span><span style="color: #CF222E">await</span><span
+                style="color: #24292F"> </span><span style="color: #8250DF">initWasm</span><span style="color: #24292F">(<span style="color: #0A3069">&#39;https://...&#39;</span>)</span></code>
+        <code><span style="color: #CF222E">const</span><span style="color: #24292F"> </span><span
+                style="color: #0550AE">db</span><span style="color: #24292F"> </span><span
+                style="color: #CF222E">=</span><span style="color: #24292F"> </span><span
+                style="color: #CF222E">await</span><span style="color: #24292F"> sqlite.</span><span
+                style="color: #8250DF">open</span><span
+                style="color: #24292F">(</span><span style="color: #0A3069">&#39;my-database.db&#39;</span><span
+                style="color: #24292F">)</span></code>
+    </pre>
+</section>
+
+<section class="slide">
+    <pre>
+        <code><span style="color: #CF222E">const</span><span style="color: #24292F"> </span><span
+                style="color: #0550AE">schema</span><span style="color: #24292F"> </span><span
+                style="color: #CF222E">=</span><span style="color: #24292F"> </span><span
+                style="color: #0A3069">`</span></code>
+        <code><span style="color: #0A3069">  CREATE TABLE IF NOT EXISTS users (</span></code>
+        <code><span style="color: #0A3069">    &quot;id&quot; TEXT PRIMARY KEY,</span></code>
+        <code><span style="color: #0A3069">    &quot;create_time&quot; TEXT,</span></code>
+        <code><span style="color: #0A3069">    &quot;name&quot; TEXT</span></code>
+        <code><span style="color: #0A3069">  );</span></code>
+        <code><span style="color: #0A3069">  SELECT crsql_as_crr(&#39;users&#39;);</span></code>
+        <code><span style="color: #0A3069">`</span><span style="color: #24292F"></span></code>
+        <code><span style="color: #CF222E">await</span><span style="color: #24292F"> db.</span><span
+                style="color: #8250DF">exec</span><span style="color: #24292F">(schema)</span></code>
+    </pre>
+</section>
+
+<section class="slide">
+    <pre>
+        <code><span style="color: #CF222E">await</span><span style="color: #24292F"> db.</span><span
+                style="color: #8250DF">execO</span><span style="color: #24292F">(</span></code>
+        <code><span style="color: #24292F">  </span><span style="color: #0A3069">`INSERT INTO users (id, create_time, name)</span></code>
+        <code><span style="color: #0A3069">   VALUES (?, ?, ?)</span></code>
+        <code><span style="color: #0A3069">   RETURNING *`</span><span style="color: #24292F">,</span></code>
+        <code><span style="color: #24292F">  [</span></code>
+        <code><span style="color: #24292F">    crypto.</span><span style="color: #8250DF">randomUUID</span><span
+                style="color: #24292F">(),</span></code>
+        <code><span style="color: #24292F">    </span><span style="color: #CF222E">new</span><span
+                style="color: #24292F"> </span><span style="color: #8250DF">Date</span><span
+                style="color: #24292F">().</span><span style="color: #8250DF">toISOString</span><span
+                style="color: #24292F">(),</span></code>
+        <code><span style="color: #24292F">    </span><span style="color: #0A3069">&#39;Sam Bulatov&#39;</span></code>
+        <code><span style="color: #24292F">  ]</span></code>
+        <code><span style="color: #24292F">)</span></code>
+        <code><br/></code>
+    </pre>
+</section>
+
+<section class="slide">
+    <pre class="center-y">
+        <code><span style="color: #24292F">[</span></code>
+        <code><span style="color: #24292F">  {</span></code>
+        <code><span style="color: #24292F">    </span><span style="color: #116329">&quot;id&quot;</span><span
+                style="color: #24292F">: </span><span style="color: #0A3069">&quot;7e4a5704-5f61-4ae0-bef3-3ac913d70dab&quot;</span><span
+                style="color: #24292F">,</span></code>
+        <code><span style="color: #24292F">    </span><span style="color: #116329">&quot;create_time&quot;</span><span
+                style="color: #24292F">: </span><span style="color: #0A3069">&quot;2023-09-30T12:32:05.196Z&quot;</span><span
+                style="color: #24292F">,</span></code>
+        <code><span style="color: #24292F">    </span><span style="color: #116329">&quot;name&quot;</span><span
+                style="color: #24292F">: </span><span style="color: #0A3069">&quot;Sam Bulatov&quot;</span></code>
+        <code><span style="color: #24292F">  }</span></code>
+        <code><span style="color: #24292F">]</span></code>
+    </pre>
 </section>
 
 <section class="slide">
     <h2>VLCN</h2>
     <div class="columns two">
         <div>
-            <p>Плюсы</p>
+            <p><span class="font-bold">Плюсы👍</span></p>
             <ul>
-                <li>Hello</li>
+                <li class="next">Умеет в&nbsp;HTTP, WebSockets, WebRTC и&nbsp;можно написать свое</li>
+                <li class="next">SQLite</li>
+                <li class="next">Можно подписаться на&nbsp;изменения</li>
+                <li class="next">Хранит данные в&nbsp;IndexedDB</li>
             </ul>
         </div>
         <div>
-            <p>Минусы</p>
+            <p><span class="font-bold">Минусы👎</span></p>
             <ul>
-                <li>Hello</li>
+                <li class="next">Сложно</li>
+                <li class="next">Много весит</li>
             </ul>
         </div>
     </div>
+</section>
+
+<section class="slide">
+    <h2>Проблемы</h2>
+    <ol>
+        <li><del>Без бекенда</del> ✅ VLCN</li>
+        <li>Авторизация</li>
+        <li>Синхронизация</li>
+    </ol>
 </section>
 
 <section class="slide">
@@ -457,15 +971,15 @@
     <h2>Анонимно</h2>
     <div class="columns two">
         <div>
-            <p>Плюсы</p>
+            <p><span class="font-bold">Плюсы👍</span></p>
             <ul>
-                <li>Hello</li>
+                <li class="next">Очень легко</li>
             </ul>
         </div>
         <div>
-            <p>Минусы</p>
+            <p><span class="font-bold">Минусы👎</span></p>
             <ul>
-                <li>Hello</li>
+                <li class="next">Каждый раз&nbsp;новый пользователь</li>
             </ul>
         </div>
     </div>
@@ -476,34 +990,58 @@
 </section>
 
 <section class="slide">
-    <pre style="background-color: #fff"><code><span style="color: #CF222E">import</span><span style="color: #24292F"> { MetaMaskSDK } </span><span style="color: #CF222E">from</span><span style="color: #24292F"> </span><span style="color: #0A3069">&#39;@metamask/sdk&#39;</span><span style="color: #24292F">;</span></code>
-<code><span style="color: #CF222E">const</span><span style="color: #24292F"> </span><span style="color: #0550AE">MMSDK</span><span style="color: #24292F"> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> </span><span style="color: #CF222E">new</span><span style="color: #24292F"> </span><span style="color: #8250DF">MetaMaskSDK</span><span style="color: #24292F">(options);</span></code>
-<code><span style="color: #CF222E">const</span><span style="color: #24292F"> </span><span style="color: #0550AE">ethereum</span><span style="color: #24292F"> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> </span><span style="color: #0550AE">MMSDK</span><span style="color: #24292F">.</span><span style="color: #8250DF">getProvider</span><span style="color: #24292F">();</span></code>
+    <pre style="background-color: #fff"><code><span style="color: #CF222E">import</span><span style="color: #24292F"> { MetaMaskSDK } </span><span
+            style="color: #CF222E">from</span><span style="color: #24292F"> </span><span style="color: #0A3069">&#39;@metamask/sdk&#39;</span><span
+            style="color: #24292F"></span></code>
+<code><span style="color: #CF222E">const</span><span style="color: #24292F"> </span><span
+        style="color: #0550AE">MMSDK</span><span style="color: #24292F"> </span><span
+        style="color: #CF222E">=</span><span style="color: #24292F"> </span><span style="color: #CF222E">new</span><span
+        style="color: #24292F"> </span><span style="color: #8250DF">MetaMaskSDK</span><span style="color: #24292F">(options)</span></code>
+<code><span style="color: #CF222E">const</span><span style="color: #24292F"> </span><span style="color: #0550AE">ethereum</span><span
+        style="color: #24292F"> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> </span><span
+        style="color: #0550AE">MMSDK</span><span style="color: #24292F">.</span><span
+        style="color: #8250DF">getProvider</span><span style="color: #24292F">()</span></code>
 <code><br></code>
-<code><span style="color: #24292F">ethereum.</span><span style="color: #8250DF">request</span><span style="color: #24292F">({</span></code>
-<code><span style="color: #24292F">  method: </span><span style="color: #0A3069">&#39;eth_requestAccounts&#39;</span><span style="color: #24292F">,</span></code>
+<code><span style="color: #24292F">ethereum.</span><span style="color: #8250DF">request</span><span
+        style="color: #24292F">({</span></code>
+<code><span style="color: #24292F">  method: </span><span
+        style="color: #0A3069">&#39;eth_requestAccounts&#39;</span><span style="color: #24292F">,</span></code>
 <code><span style="color: #24292F">  params: []</span></code>
-<code><span style="color: #24292F">});</span></code></pre>
+<code><span style="color: #24292F">})</span></code></pre>
 </section>
 
 <section class="slide">
-    <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.6]" src="./pictures/metamask-login.png" alt="">
-    <img class="next absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.6]" src="./pictures/metamask-accounts.png" alt="">
+    <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.6]"
+         src="./pictures/metamask-login.png" alt="">
+</section>
+
+<section class="slide clear black">
+    <img class="cover" src="./pictures/metamask-accounts-2.png" alt="">
+    <div class="spotlight next" style="
+        --spotlight-radius: 0;
+        --spotlight-opacity: 0.5;
+        --spotlight-width: 234px;
+        --spotlight-height: 638px;
+        --spotlight-top: -243px;
+        --spotlight-left: 342px;"></div>
 </section>
 
 <section class="slide">
     <h2>Metamask (Web3)</h2>
     <div class="columns two">
         <div>
-            <p>Плюсы</p>
+            <p><span class="font-bold">Плюсы👍</span></p>
             <ul>
-                <li>Hello</li>
+                <li class="next">Один пользователь на&nbsp;разных устройствах</li>
+                <li class="next">Один человек может иметь несколько пользователей</li>
+                <li class="next">Работает везде: веб, мобильные устройства и&nbsp;тд.</li>
             </ul>
         </div>
         <div>
-            <p>Минусы</p>
+            <p><span class="font-bold">Минусы👎</span></p>
             <ul>
-                <li>Hello</li>
+                <li class="next">Все таки это какая-то внешняя штука</li>
+                <li class="next">Никто не&nbsp;знает что&nbsp;это</li>
             </ul>
         </div>
     </div>
@@ -513,6 +1051,15 @@
     <a href="https://youtu.be/148VLChS-eQ?si=U8u1IYN8QvKgqoVv">
         <img class="cover" src="./pictures/maxresdefault.jpg" alt="">
     </a>
+</section>
+
+<section class="slide">
+    <h2>Проблемы</h2>
+    <ol>
+        <li><del>Без бекенда</del> ✅ VLCN</li>
+        <li><del>Авторизация</del> ✅ Metamask</li>
+        <li>Синхронизация</li>
+    </ol>
 </section>
 
 <section class="slide">
@@ -529,57 +1076,110 @@
 </section>
 
 <section class="slide">
-    <h2 class="shout-section">Для HTTP и WebSocket-ов нужнен бекенд😐</h2>
+    <h2 class="shout-section">Для HTTP и&nbsp;WebSocket-ов нужен бекенд😐</h2>
 </section>
 
 <section class="slide">
-    <h2 class="shout-section">Для WebRTC бекенд не нужен*😊</h2>
+    <h2 class="shout-section">Для WebRTC<br>бекенд не нужен*😊</h2>
 </section>
 
-<section class="slide clear black">
-    <img class="place" src="./pictures/webrtc.png" alt="">
+<section class="slide">
+    <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.8]" src="./pictures/webrtc.svg"
+         alt="">
 </section>
 
 <section class="slide">
     <h2>WebRTC</h2>
     <div class="columns two">
         <div>
-            <p>Плюсы</p>
+            <p><span class="font-bold">Плюсы👍</span></p>
             <ul>
-                <li>Hello</li>
+                <li>С&nbsp;помощью него можно установить P2P соединение</li>
+                <li>Может работать внутри локальной сети</li>
             </ul>
         </div>
         <div>
-            <p>Минусы</p>
+            <p><span class="font-bold">Минусы👎</span></p>
             <ul>
-                <li>Hello</li>
+                <li>Нужен сигнал-сервер</li>
             </ul>
         </div>
     </div>
 </section>
 
 <section class="slide">
-    <h2 class="shout-section">VLCN умеет в WebRTC😎</h2>
+    <h2 class="shout-section">VLCN умеет в&nbsp;WebRTC😎</h2>
 </section>
 
 <section class="slide">
-    слайд с примером кодом
+    <pre style="background-color: #fff">
+        <code><span style="color: #CF222E">import</span><span style="color: #24292F"> { wdbRtc } </span><span
+                style="color: #CF222E">from</span><span style="color: #24292F"> </span><span style="color: #0A3069">&quot;@vlcn.io/sync-p2p&quot;</span></code>
+        <code><br/></code>
+        <code><span style="color: #CF222E">const</span><span style="color: #24292F"> </span><span
+                style="color: #0550AE">dbRtc</span><span style="color: #24292F"> </span><span
+                style="color: #CF222E">=</span><span style="color: #24292F"> </span><span
+                style="color: #CF222E">await</span><span style="color: #24292F"> </span><span style="color: #8250DF">wdbRtc</span><span
+                style="color: #24292F">(db)</span></code>
+        <code><span style="color: #CF222E">const</span><span style="color: #24292F"> </span><span
+                style="color: #0550AE">myPeerId</span><span style="color: #24292F"> </span><span style="color: #CF222E">=</span></code>
+        <code><span style="color: #24292F">  </span><span style="color: #CF222E">await</span><span
+                style="color: #24292F"> database.</span><span style="color: #8250DF">execA</span><span
+                style="color: #24292F">(</span><span
+                style="color: #0A3069">&quot;SELECT crsql_siteid();&quot;</span><span
+                style="color: #24292F">);</span></code>
+        <code><br/></code>
+        <code><span style="color: #24292F">connectButton.</span><span
+                style="color: #8250DF">addEventListener</span><span style="color: #24292F">(</span><span
+                style="color: #0A3069">&quot;click&quot;</span><span style="color: #24292F">, () </span><span
+                style="color: #CF222E">=&gt;</span><span style="color: #24292F"> {</span></code>
+        <code><span style="color: #24292F">  dbRtc.</span><span style="color: #8250DF">connectTo</span><span
+                style="color: #24292F">(peerInput.value)</span></code>
+        <code><span style="color: #24292F">})</span></code>
+    </pre>
+</section>
+
+<section class="slide">
+    <h2>Проблемы</h2>
+    <ol>
+        <li><del>Без бекенда</del> ✅ VLCN</li>
+        <li><del>Авторизация</del> ✅ Metamask</li>
+        <li><del>Синхронизация</del> ✅ WebRTC</li>
+    </ol>
+</section>
+
+<section class="slide clear black">
+    <img class="cover" src="./pictures/pwa-nikita.jpeg" alt="">
+</section>
+
+<section class="slide">
+    <h2 class="shout-section">Демо</h2>
+</section>
+
+<section class="slide clear black">
+    <video src="./pictures/demo.mp4" class="cover" controls muted></video>
 </section>
 
 <section class="slide">
     <h2>Итоги</h2>
+    <ul>
+        <li class="next">Нативные приложения, бойтесь!</li>
+        <li class="next">Оно работает, но пока не production ready</li>
+    </ul>
 </section>
 
 <section class="slide">
-    <h2 class="shout-section">Спасибо!</h2>
+    <h2 class="shout-section">Спасибо!🥳</h2>
 </section>
 
 <section class="slide">
     <h2>С вами был <span class="text-primary">Сэм Булатов</span>!</h2>
-    <ul>
-        <li>@mephistorine</li>
-    </ul>
-    <img class="w-[50px]" src="./pictures/fc23-feedback.svg" alt="">
+    <div class="font-bold text-[50px]">@mephistorine</div>
+    <div class="font-bold text-[50px]"><a href="http://simp.ly/p/0zp49H">simp.ly/p/0zp49H</a></div>
+    <div class="flex gap-4 justify-between">
+        <img class="w-[245px]" src="./pictures/pres-qr.svg" alt="">
+        <img class="w-[245px]" src="./pictures/fc23-feedback.svg" alt="">
+    </div>
 </section>
 
 <div class="progress"></div>

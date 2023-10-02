@@ -1,0 +1,124 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1092.5488774310343 482.0525515839795"
+     width="2185.0977548620685" height="964.105103167959">
+    <g stroke-linecap="round">
+        <g transform="translate(178.8890153484342 91.91069558617346) rotate(0 407.057706818133 0)">
+            <path d="M0 0 C135.69 0, 678.43 0, 814.12 0 M0 0 C135.69 0, 678.43 0, 814.12 0" stroke="#1e1e1e"
+                  stroke-width="4" fill="none"></path>
+        </g>
+        <g transform="translate(178.8890153484342 91.91069558617346) rotate(0 407.057706818133 0)">
+            <path d="M785.92 10.26 C794.9 7, 803.87 3.73, 814.12 0 M785.92 10.26 C796.18 6.53, 806.44 2.79, 814.12 0"
+                  stroke="#1e1e1e" stroke-width="4" fill="none"></path>
+        </g>
+        <g transform="translate(178.8890153484342 91.91069558617346) rotate(0 407.057706818133 0)">
+            <path d="M785.92 -10.26 C794.9 -7, 803.87 -3.73, 814.12 0 M785.92 -10.26 C796.18 -6.53, 806.44 -2.79, 814.12 0"
+                  stroke="#1e1e1e" stroke-width="4" fill="none"></path>
+        </g>
+    </g>
+    <mask></mask>
+    <g transform="translate(10 68.16430149300459) rotate(0 74.0478515625 20.700000000000045)">
+        <text x="0" y="0" font-family="Helvetica, Segoe UI Emoji" font-size="36px" fill="#1e1e1e" text-anchor="start"
+              style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">Counter1
+        </text>
+    </g>
+    <g transform="translate(986.2029699399606 31.757114791071672) rotate(0 34.0048828125 20.700000000000045)">
+        <text x="0" y="0" font-family="Helvetica, Segoe UI Emoji" font-size="36px" fill="#1e1e1e" text-anchor="start"
+              style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">time
+        </text>
+    </g>
+    <g class="next">
+        <g transform="translate(219.12775164972345 11.982075690308875) rotate(0 10.546875 21.600000000000023)">
+            <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+                  style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">0
+            </text>
+        </g>
+        <g transform="translate(241.13525510244665 373.2853892272942) rotate(0 10.546875 21.59999999999991)">
+            <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+                  style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">0
+            </text>
+        </g>
+    </g>
+    <g class="next">
+        <g transform="translate(488.4261278447078 10) rotate(0 21.09375 21.600000000000023)">
+            <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+                  style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">+1
+            </text>
+        </g>
+        <g transform="translate(510.433631297431 373.45235755990234) rotate(0 21.09375 21.59999999999991)">
+            <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+                  style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">+5
+            </text>
+        </g>
+    </g>
+    <g class="next">
+        <g stroke-linecap="round">
+            <g transform="translate(613.9486114388612 447.36546815258953) rotate(0 65.61047560189616 -177.29882492822856)">
+                <path d="M0 0 C21.87 -59.1, 109.35 -295.5, 131.22 -354.6 M0 0 C21.87 -59.1, 109.35 -295.5, 131.22 -354.6"
+                      stroke="#2f9e44" stroke-width="4" fill="none"></path>
+            </g>
+            <g transform="translate(613.9486114388612 447.36546815258953) rotate(0 65.61047560189616 -177.29882492822856)">
+                <path d="M131.06 -324.6 C131.11 -334.12, 131.16 -343.65, 131.22 -354.6 M131.06 -324.6 C131.1 -332.97, 131.15 -341.34, 131.22 -354.6"
+                      stroke="#2f9e44" stroke-width="4" fill="none"></path>
+            </g>
+            <g transform="translate(613.9486114388612 447.36546815258953) rotate(0 65.61047560189616 -177.29882492822856)">
+                <path d="M111.81 -331.72 C117.98 -338.98, 124.14 -346.25, 131.22 -354.6 M111.81 -331.72 C117.23 -338.1, 122.64 -344.49, 131.22 -354.6"
+                      stroke="#2f9e44" stroke-width="4" fill="none"></path>
+            </g>
+        </g>
+        <g stroke-linecap="round">
+            <g transform="translate(626.6597490180161 92.62239426450674) rotate(0 58.89942584612197 181.70194144134655)">
+                <path d="M0 0 C19.63 60.57, 98.17 302.84, 117.8 363.4 M0 0 C19.63 60.57, 98.17 302.84, 117.8 363.4"
+                      stroke="#2f9e44" stroke-width="4" fill="none"></path>
+            </g>
+            <g transform="translate(626.6597490180161 92.62239426450674) rotate(0 58.89942584612197 181.70194144134655)">
+                <path d="M99.35 339.75 C104.74 346.67, 110.14 353.58, 117.8 363.4 M99.35 339.75 C103.8 345.46, 108.25 351.16, 117.8 363.4"
+                      stroke="#2f9e44" stroke-width="4" fill="none"></path>
+            </g>
+            <g transform="translate(626.6597490180161 92.62239426450674) rotate(0 58.89942584612197 181.70194144134655)">
+                <path d="M118.87 333.42 C118.55 342.19, 118.24 350.95, 117.8 363.4 M118.87 333.42 C118.61 340.66, 118.35 347.89, 117.8 363.4"
+                      stroke="#2f9e44" stroke-width="4" fill="none"></path>
+            </g>
+        </g>
+        <g transform="translate(740.9253353492746 246.5833551543965) rotate(0 42.1875 21.59999999999991)">
+            <text x="0" y="0" font-family="monospace" font-size="36px" fill="#2f9e44" text-anchor="start"
+                  style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">Sync
+            </text>
+        </g>
+    </g>
+    <g class="next">
+        <g transform="translate(856.2412063533878 13.09160719086185) rotate(0 10.546875 21.600000000000023)">
+            <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+                  style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">5
+            </text>
+        </g>
+        <g transform="translate(858.7349591920101 377.1256608772678) rotate(0 10.546875 21.59999999999991)">
+            <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+                  style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">5
+            </text>
+        </g>
+    </g>
+    <g stroke-linecap="round">
+        <g transform="translate(200.8965188011574 453.21400912315903) rotate(0 404.6986058606458 0)">
+            <path d="M0 0 C134.9 0, 674.5 0, 809.4 0 M0 0 C134.9 0, 674.5 0, 809.4 0" stroke="#1e1e1e" stroke-width="4"
+                  fill="none"></path>
+        </g>
+        <g transform="translate(200.8965188011574 453.21400912315903) rotate(0 404.6986058606458 0)">
+            <path d="M781.21 10.26 C791.96 6.35, 802.71 2.43, 809.4 0 M781.21 10.26 C787.68 7.9, 794.16 5.55, 809.4 0"
+                  stroke="#1e1e1e" stroke-width="4" fill="none"></path>
+        </g>
+        <g transform="translate(200.8965188011574 453.21400912315903) rotate(0 404.6986058606458 0)">
+            <path d="M781.21 -10.26 C791.96 -6.35, 802.71 -2.43, 809.4 0 M781.21 -10.26 C787.68 -7.9, 794.16 -5.55, 809.4 0"
+                  stroke="#1e1e1e" stroke-width="4" fill="none"></path>
+        </g>
+    </g>
+    <mask></mask>
+    <g transform="translate(34.371990485455854 430.6525515839794) rotate(0 74.0478515625 20.700000000000045)">
+        <text x="0" y="0" font-family="Helvetica, Segoe UI Emoji" font-size="36px" fill="#1e1e1e" text-anchor="start"
+              style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">Counter2
+        </text>
+    </g>
+    <g transform="translate(1014.5391118060344 394.74626987986903) rotate(0 34.0048828125 20.700000000000045)">
+        <text x="0" y="0" font-family="Helvetica, Segoe UI Emoji" font-size="36px" fill="#1e1e1e" text-anchor="start"
+              style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">time
+        </text>
+    </g>
+</svg>

@@ -1,0 +1,133 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1374.5530051299284 480.0704758936704"
+     width="2749.1060102598567" height="960.1409517873408">
+    <!-- svg-source:excalidraw -->
+
+    <defs>
+        <style class="style-fonts">
+            @font-face {
+            font-family: "Virgil";
+            src: url("https://excalidraw.com/Virgil.woff2");
+            }
+            @font-face {
+            font-family: "Cascadia";
+            src: url("https://excalidraw.com/Cascadia.woff2");
+            }
+        </style>
+
+    </defs>
+    <g stroke-linecap="round">
+        <g transform="translate(119.9868964646895 89.92861989586459) rotate(0 600.1108018391704 0)">
+            <path d="M0 0 C200.04 0, 1000.18 0, 1200.22 0 M0 0 C200.04 0, 1000.18 0, 1200.22 0" stroke="#1e1e1e"
+                  stroke-width="4" fill="none"></path>
+        </g>
+        <g transform="translate(119.9868964646895 89.92861989586459) rotate(0 600.1108018391704 0)">
+            <path d="M1172.03 10.26 C1181 7, 1189.97 3.73, 1200.22 0 M1172.03 10.26 C1182.29 6.53, 1192.55 2.79, 1200.22 0"
+                  stroke="#1e1e1e" stroke-width="4" fill="none"></path>
+        </g>
+        <g transform="translate(119.9868964646895 89.92861989586459) rotate(0 600.1108018391704 0)">
+            <path d="M1172.03 -10.26 C1181 -7, 1189.97 -3.73, 1200.22 0 M1172.03 -10.26 C1182.29 -6.53, 1192.55 -2.79, 1200.22 0"
+                  stroke="#1e1e1e" stroke-width="4" fill="none"></path>
+        </g>
+    </g>
+    <mask></mask>
+    <g transform="translate(18.96781528359861 67.36716235668473) rotate(0 37.0107421875 20.700000000000045)">
+        <text x="0" y="0" font-family="Helvetica, Segoe UI Emoji" font-size="36px" fill="#1e1e1e" text-anchor="start"
+              style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">Sam
+        </text>
+    </g>
+    <g transform="translate(1274.5357360522048 22.29916666014128) rotate(0 34.0048828125 20.700000000000045)">
+        <text x="0" y="0" font-family="Helvetica, Segoe UI Emoji" font-size="36px" fill="#1e1e1e" text-anchor="start"
+              style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">time
+        </text>
+    </g>
+    <g transform="translate(160.22563276597873 10) rotate(0 84.375 21.600000000000023)">
+        <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+              style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">"Hello!"
+        </text>
+    </g>
+    <g transform="translate(429.5240089609631 10.166968332607667) rotate(0 147.65625 21.600000000000023)">
+        <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+              style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">"Hello World!"
+        </text>
+    </g>
+    <g transform="translate(819.1365339877955 10.086177203926354) rotate(0 179.296875 21.600000000000023)">
+        <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+              style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">"Hello World! :D"
+        </text>
+    </g>
+    <g stroke-linecap="round">
+        <g transform="translate(141.9943999174127 451.23193343285016) rotate(0 600.1108018391703 0)">
+            <path d="M0 0 C200.04 0, 1000.18 0, 1200.22 0 M0 0 C200.04 0, 1000.18 0, 1200.22 0" stroke="#1e1e1e"
+                  stroke-width="4" fill="none"></path>
+        </g>
+        <g transform="translate(141.9943999174127 451.23193343285016) rotate(0 600.1108018391703 0)">
+            <path d="M1172.03 10.26 C1182.78 6.35, 1193.54 2.43, 1200.22 0 M1172.03 10.26 C1178.51 7.9, 1184.98 5.55, 1200.22 0"
+                  stroke="#1e1e1e" stroke-width="4" fill="none"></path>
+        </g>
+        <g transform="translate(141.9943999174127 451.23193343285016) rotate(0 600.1108018391703 0)">
+            <path d="M1172.03 -10.26 C1182.78 -6.35, 1193.54 -2.43, 1200.22 0 M1172.03 -10.26 C1178.51 -7.9, 1184.98 -5.55, 1200.22 0"
+                  stroke="#1e1e1e" stroke-width="4" fill="none"></path>
+        </g>
+    </g>
+    <mask></mask>
+    <g transform="translate(10 428.6704758936703) rotate(0 55.037109375 20.700000000000045)">
+        <text x="0" y="0" font-family="Helvetica, Segoe UI Emoji" font-size="36px" fill="#1e1e1e" text-anchor="start"
+              style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">Alyona
+        </text>
+    </g>
+    <g transform="translate(1296.5432395049284 383.60248019712685) rotate(0 34.0048828125 20.700000000000045)">
+        <text x="0" y="0" font-family="Helvetica, Segoe UI Emoji" font-size="36px" fill="#1e1e1e" text-anchor="start"
+              style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">time
+        </text>
+    </g>
+    <g transform="translate(182.23313621870193 371.30331353698557) rotate(0 84.375 21.600000000000023)">
+        <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+              style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">"Hello!"
+        </text>
+    </g>
+    <g transform="translate(451.5315124136863 371.47028186959324) rotate(0 116.015625 21.600000000000023)">
+        <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+              style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">"Hello! :D"
+        </text>
+    </g>
+    <g transform="translate(841.1440374405187 371.3894907409119) rotate(0 179.296875 21.600000000000023)">
+        <text x="0" y="0" font-family="monospace" font-size="36px" fill="#1e1e1e" text-anchor="start"
+              style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">"Hello World! :D"
+        </text>
+    </g>
+    <g stroke-linecap="round">
+        <g transform="translate(707.2462068397596 447.1554112180188) rotate(0 65.61047560189616 -177.29882492822856)">
+            <path d="M0 0 C21.87 -59.1, 109.35 -295.5, 131.22 -354.6 M0 0 C21.87 -59.1, 109.35 -295.5, 131.22 -354.6"
+                  stroke="#2f9e44" stroke-width="4" fill="none"></path>
+        </g>
+        <g transform="translate(707.2462068397596 447.1554112180188) rotate(0 65.61047560189616 -177.29882492822856)">
+            <path d="M131.06 -324.6 C131.11 -334.12, 131.16 -343.65, 131.22 -354.6 M131.06 -324.6 C131.1 -332.97, 131.15 -341.34, 131.22 -354.6"
+                  stroke="#2f9e44" stroke-width="4" fill="none"></path>
+        </g>
+        <g transform="translate(707.2462068397596 447.1554112180188) rotate(0 65.61047560189616 -177.29882492822856)">
+            <path d="M111.81 -331.72 C117.98 -338.98, 124.14 -346.25, 131.22 -354.6 M111.81 -331.72 C117.23 -338.1, 122.64 -344.49, 131.22 -354.6"
+                  stroke="#2f9e44" stroke-width="4" fill="none"></path>
+        </g>
+    </g>
+    <mask></mask>
+    <g stroke-linecap="round">
+        <g transform="translate(766.7623383014803 88.66362895913426) rotate(0 22.32797492982479 180.0591884914984)">
+            <path d="M0 0 C7.44 60.02, 37.21 300.1, 44.66 360.12 M0 0 C7.44 60.02, 37.21 300.1, 44.66 360.12"
+                  stroke="#2f9e44" stroke-width="4" fill="none"></path>
+        </g>
+        <g transform="translate(766.7623383014803 88.66362895913426) rotate(0 22.32797492982479 180.0591884914984)">
+            <path d="M31 333.4 C35 341.21, 38.99 349.02, 44.66 360.12 M31 333.4 C34.3 339.85, 37.59 346.29, 44.66 360.12"
+                  stroke="#2f9e44" stroke-width="4" fill="none"></path>
+        </g>
+        <g transform="translate(766.7623383014803 88.66362895913426) rotate(0 22.32797492982479 180.0591884914984)">
+            <path d="M51.37 330.88 C49.41 339.43, 47.44 347.98, 44.66 360.12 M51.37 330.88 C49.75 337.93, 48.13 344.99, 44.66 360.12"
+                  stroke="#2f9e44" stroke-width="4" fill="none"></path>
+        </g>
+    </g>
+    <mask></mask>
+    <g transform="translate(829.1546339442473 234.85786934515113) rotate(0 42.1875 21.600000000000023)">
+        <text x="0" y="0" font-family="monospace" font-size="36px" fill="#2f9e44" text-anchor="start"
+              style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">Sync
+        </text>
+    </g>
+</svg>
